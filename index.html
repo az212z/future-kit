@@ -9,7 +9,7 @@
   <meta property="og:description" content="أفكار للمطابخ، خيارات التشطيب، وطلب عرض سعر لمطبخك في الرياض.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://az212z.github.io/future-kit/">
-  <meta property="og:image" content="https://az212z.github.io/future-kit/assets/hero.webp">
+  <meta property="og:image" content="https://az212z.github.io/future-kit/assets/panorama.webp">
   <link rel="canonical" href="https://az212z.github.io/future-kit/">
   <title>فيوتشر كيت | تفصيل مطابخ حسب المقاس في الرياض</title>
   <link rel="icon" href="assets/mark.png" type="image/png">
@@ -25,9 +25,6 @@
     <symbol id="arrow" viewBox="0 0 24 24"><path d="M20 12H4m0 0 6-6m-6 6 6 6"/></symbol>
     <symbol id="diagonal" viewBox="0 0 24 24"><path d="M18 18 6 6m0 10V6h10"/></symbol>
     <symbol id="pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 11-8 11S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
-    <symbol id="measure" viewBox="0 0 24 24"><path d="m3 16 13-13 5 5L8 21zM8 11l2 2m2-6 2 2m2-6 2 2"/></symbol>
-    <symbol id="layout" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="1"/><path d="M3 10h18M9 10v10m6-16v6"/></symbol>
-    <symbol id="tool" viewBox="0 0 24 24"><path d="m12 9-8.5 8.5a2.1 2.1 0 0 0 3 3L15 12a5 5 0 0 0 6-6l-3 3-3-3 3-3a5 5 0 0 0-6 6Z"/></symbol>
     <symbol id="menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
     <symbol id="x" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
     <symbol id="plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
@@ -37,71 +34,73 @@
       <a class="brand" href="./" aria-label="فيوتشر كيت، الرئيسية"><img src="assets/logo.png" width="960" height="315" alt="فيوتشر كيت"></a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation" aria-label="القائمة"><svg class="icon"><use href="#menu"/></svg></button>
       <nav id="navigation" aria-label="القائمة الرئيسية">
-        <a href="#kitchens">تصاميم المطابخ</a><a href="#finishes">الخامات</a><a href="#process">مراحل العمل</a><a href="#faq">الأسئلة الشائعة</a><a class="mobile-quote" href="#quote">اطلب عرض سعر</a>
+        <a href="#kitchens">التصاميم</a><a href="#finishes">الخامات</a><a href="#process">من القياس للتركيب</a><a class="mobile-quote" href="#quote">اطلب عرض سعر</a>
       </nav>
-      <a class="button button-dark head-quote" href="#quote">اطلب عرض سعر <svg class="icon"><use href="#diagonal"/></svg></a>
+      <a class="button button-outline head-quote" href="#quote">اطلب عرض سعر <svg class="icon"><use href="#diagonal"/></svg></a>
     </div>
   </header>
   <main id="main">
     <section class="hero" aria-labelledby="headline">
-      <div class="hero-text">
-        <p class="location"><svg class="icon"><use href="#pin"/></svg> تصميم وتفصيل مطابخ في الرياض</p>
-        <h1 id="headline">كل شيء في مكانه</h1>
-        <p class="hero-summary">سطح واسع للتحضير، وأدراج قريبة من الموقد، وخزائن تستفيد من الزوايا. نرتّب معك تفاصيل مطبخك من أول قياس إلى التركيب.</p>
-        <div class="hero-actions">
-          <a class="button button-dark" href="#quote">اطلب عرض سعر <svg class="icon"><use href="#diagonal"/></svg></a>
-          <a class="line-link" href="#kitchens">تصفّح التصاميم <svg class="icon"><use href="#arrow"/></svg></a>
+      <figure class="hero-photo">
+        <picture>
+          <source media="(max-width: 640px)" srcset="assets/panorama-mobile.webp">
+          <img src="assets/panorama.webp" alt="تصوّر لمطبخ بجزيرة من الترافرتين وخزائن خضراء داكنة" width="1752" height="897" fetchpriority="high">
+        </picture>
+        <figcaption>ترافرتين وجوز <span>تصوّر تصميمي</span></figcaption>
+      </figure>
+      <div class="hero-inner wrap">
+        <div class="hero-text">
+          <p class="location"><svg class="icon"><use href="#pin"/></svg> تصميم وتفصيل مطابخ في الرياض</p>
+          <h1 id="headline"><span>كل شيء</span> <span>في مكانه</span></h1>
+          <p class="hero-summary">سطح واسع للتحضير، وأدراج قريبة من الموقد، وخزائن تستفيد من الزوايا. نرتّب معك تفاصيل مطبخك من أول قياس إلى التركيب.</p>
+          <div class="hero-actions">
+            <a class="button button-gold" href="#kitchens">تصفّح التصاميم <svg class="icon"><use href="#diagonal"/></svg></a>
+            <a class="line-link" href="#quote">اطلب عرض سعر <svg class="icon"><use href="#arrow"/></svg></a>
+          </div>
         </div>
       </div>
-      <figure class="hero-photo">
-        <img src="assets/hero.webp" alt="تصور لمطبخ بخزائن خضراء وجزيرة حجرية وواجهات من الجوز" width="1536" height="1024" fetchpriority="high">
-        <figcaption>جوز طبيعي وأخضر مطفي <span>تصوّر للمطبخ</span></figcaption>
-      </figure>
     </section>
-    <div class="service-band">
-      <ul class="wrap service-list">
-        <li><svg class="icon"><use href="#measure"/></svg><span>قياس المساحة</span></li>
-        <li><svg class="icon"><use href="#layout"/></svg><span>تصميم وتوزيع</span></li>
-        <li><svg class="icon"><use href="#tool"/></svg><span>تفصيل وتركيب</span></li>
-      </ul>
-    </div>
     <section id="kitchens" class="section wrap">
       <div class="section-heading">
-        <div><h2>أفكار لتوزيع مطبخك</h2><p>مطبخ زاوية يترك الوسط مفتوحًا، أو جزيرة تزيد مساحة التحضير. شوف أي توزيع يناسب مساحتك.</p></div>
+        <div><h2>تصاميم المطابخ</h2><p>تصفّح أفكار المطابخ بجزيرة، أو بخزائن على جدارين أو ثلاثة.</p></div>
         <div class="filters" role="group" aria-label="تصفية التصاميم">
           <button type="button" aria-pressed="true" data-filter="all">الكل</button>
-          <button type="button" aria-pressed="false" data-filter="corner">مطابخ زاوية</button>
-          <button type="button" aria-pressed="false" data-filter="island">مطابخ بجزيرة</button>
+          <button type="button" aria-pressed="false" data-filter="corner">مطبخ زاوية</button>
+          <button type="button" aria-pressed="false" data-filter="island">مطبخ بجزيرة</button>
+          <button type="button" aria-pressed="false" data-filter="u-shape">مطبخ على ٣ جدران</button>
         </div>
       </div>
       <div class="gallery">
+        <article class="design design-featured" data-category="island">
+          <button type="button" class="design-button" data-design="island" aria-haspopup="dialog">
+            <img src="assets/collection-island.webp" alt="مطبخ مفتوح بجزيرة من الترافرتين وخزائن خضراء داكنة" width="718" height="724" loading="lazy">
+            <span class="design-label"><span><small>مطبخ مفتوح</small><strong>جزيرة حجرية</strong></span><span class="circle"><svg class="icon"><use href="#diagonal"/></svg></span></span>
+          </button>
+        </article>
         <article class="design" data-category="corner">
           <button type="button" class="design-button" data-design="ivory" aria-haspopup="dialog">
-            <img src="assets/ivory.webp" alt="مطبخ زاوية بواجهات عاجية وسطح فاتح" width="718" height="724" loading="lazy">
-            <span class="design-label"><span><strong>عاجي مطفي</strong><small>مطبخ زاوية</small></span><span class="circle"><svg class="icon"><use href="#diagonal"/></svg></span></span>
+            <img src="assets/collection-ivory.webp" alt="مطبخ زاوية بواجهات رملية فاتحة ولمسات من البلوط" width="718" height="724" loading="lazy">
+            <span class="design-label"><span><small>مطبخ زاوية</small><strong>رملي مطفي</strong></span><span class="circle"><svg class="icon"><use href="#diagonal"/></svg></span></span>
           </button>
         </article>
-        <article class="design" data-category="corner">
+        <article class="design" data-category="u-shape">
           <button type="button" class="design-button" data-design="walnut" aria-haspopup="dialog">
-            <img src="assets/walnut.webp" alt="مطبخ زاوية بواجهات خشبية وسطح حجري فاتح" width="718" height="724" loading="lazy">
-            <span class="design-label"><span><strong>خشب بلون الجوز</strong><small>مطبخ زاوية</small></span><span class="circle"><svg class="icon"><use href="#diagonal"/></svg></span></span>
-          </button>
-        </article>
-        <article class="design" data-category="island">
-          <button type="button" class="design-button" data-design="island" aria-haspopup="dialog">
-            <img src="assets/island.webp" alt="مطبخ مفتوح بجزيرة حجرية داكنة وخزائن فاتحة" width="718" height="724" loading="lazy">
-            <span class="design-label"><span><strong>جزيرة حجرية</strong><small>مطبخ مفتوح</small></span><span class="circle"><svg class="icon"><use href="#diagonal"/></svg></span></span>
+            <img src="assets/collection-walnut.webp" alt="مطبخ على ثلاثة جدران بخزائن من الجوز وبلاط فاتح" width="718" height="724" loading="lazy">
+            <span class="design-label"><span><small>مطبخ على ٣ جدران</small><strong>واجهات بلون الجوز</strong></span><span class="circle"><svg class="icon"><use href="#diagonal"/></svg></span></span>
           </button>
         </article>
       </div>
-      <p class="gallery-note">تصوّرات للمطابخ تعرض خيارات التوزيع والتشطيب.</p>
+      <p class="gallery-note">الصور تصوّرات للتوزيع والتشطيب.</p>
     </section>
     <section class="finishes" id="finishes" aria-labelledby="finishes-title">
       <div class="wrap finish-grid">
-        <img src="assets/materials.webp" alt="تفصيل درج بواجهة خشبية أسفل سطح حجري" width="1080" height="720" loading="lazy">
+        <figure class="finish-photo">
+          <img id="material-image" src="assets/finish-fronts.webp" alt="تفصيل واجهات خضراء مطفية مع حافة من الجوز" width="720" height="720" loading="lazy">
+          <figcaption id="material-caption">أخضر مطفي مع حافة جوز</figcaption>
+        </figure>
         <div class="finish-copy">
-          <h2 id="finishes-title">واجهات وأسطح للعمل اليومي</h2>
-          <p>شوف اللون تحت إضاءة مطبخك. وجرّب ملمس السطح وطريقة تنظيفه قبل ما تختار.</p>
+          <h2 id="finishes-title">الخامات عن قرب</h2>
+          <p>اختيار الخامة يبدأ من ملمسها وطريقة تنظيفها. جرّب العيّنة تحت إضاءة مطبخك قبل اعتماد اللون.</p>
           <div class="material-tabs" role="group" aria-label="تفاصيل الخامات">
             <button type="button" aria-pressed="true" data-material="fronts">الواجهات</button>
             <button type="button" aria-pressed="false" data-material="tops">أسطح العمل</button>
@@ -109,19 +108,24 @@
           </div>
           <div class="material-detail" aria-live="polite">
             <h3 id="material-name">مطفي أو بنقشة خشب؟</h3>
-            <p id="material-description">المطفي يعطي الواجهة لونًا هادئًا، وضوء النهار يبرز نقشة الخشب. جرّب تفتح وتقفل عيّنة الباب عشان تشوف الحواف وتحس بمسكته.</p>
+            <p id="material-description">المطفي يخفّف انعكاس الإضاءة، وخشب الجوز يضيف ملمسًا واضحًا. جرّب فتح باب العيّنة حتى تشوف الحواف وتحس بمسكة الباب.</p>
           </div>
         </div>
       </div>
     </section>
-    <section id="process" class="section wrap">
-      <div class="section-heading"><div><h2>من المقاس إلى التركيب</h2><p>نشوف المساحة أول، ثم نتفق على التوزيع والخامات قبل ما يبدأ التفصيل.</p></div></div>
-      <ol class="steps">
-        <li><span aria-hidden="true">٠١</span><h3>نقيس المكان</h3><p>نقيس الجدران وفتحات الأبواب، ونحدد نقاط الماء والكهرباء.</p></li>
-        <li><span aria-hidden="true">٠٢</span><h3>نتفق على التوزيع</h3><p>نوزّع الأجهزة والخزائن، ونتأكد إن الأبواب والأدراج تفتح براحة.</p></li>
-        <li><span aria-hidden="true">٠٣</span><h3>نعتمد التفاصيل</h3><p>نراجع معك الخامات واللون، ونتفق على تفاصيل الطلب والسعر والمدة قبل التصنيع.</p></li>
-        <li><span aria-hidden="true">٠٤</span><h3>نركّب المطبخ</h3><p>بعد التركيب نراجع معك استواء السطح ونجرّب الأبواب والأدراج.</p></li>
-      </ol>
+    <section id="process" class="section wrap process">
+      <div class="process-photo">
+        <img src="assets/studio.webp" alt="مخطط مطبخ وعينات واجهات وخشب وحجر على طاولة التصميم" width="900" height="1350" loading="lazy">
+      </div>
+      <div class="process-copy">
+        <h2>من القياس<br>إلى التركيب</h2>
+        <ol class="steps">
+          <li><span aria-hidden="true">٠١</span><div><h3>نقيس المكان</h3><p>نقيس الجدران والفتحات، ونحدد نقاط الماء والكهرباء.</p></div></li>
+          <li><span aria-hidden="true">٠٢</span><div><h3>نرسم التوزيع</h3><p>نحدد مكان كل جهاز ونتأكد إن الأدراج والأبواب تفتح براحة.</p></div></li>
+          <li><span aria-hidden="true">٠٣</span><div><h3>نعتمد الخامات</h3><p>نتفق معك على اللون والتشطيب والسعر والمدة قبل التصنيع.</p></div></li>
+          <li><span aria-hidden="true">٠٤</span><div><h3>نركّب ونراجع</h3><p>بعد التركيب نراجع استواء السطح ونجرّب الأبواب والأدراج معك.</p></div></li>
+        </ol>
+      </div>
     </section>
     <section id="faq" class="faq section">
       <div class="wrap faq-grid">
@@ -138,12 +142,13 @@
       <div class="wrap quote-grid">
         <div class="quote-copy">
           <p class="location"><svg class="icon"><use href="#pin"/></svg> الرياض، السعودية</p>
-          <h2>اطلب عرض سعر لمطبخك</h2>
+          <h2>ابدأ مشروع مطبخك</h2>
           <p>ابدأ باسم الحي ونوع المشروع. وإذا عندك مقاسات تقريبية أو تصميم أعجبك من المعرض، أضفه للطلب.</p>
           <a id="store-whatsapp" class="line-link" target="_blank" rel="noopener noreferrer" hidden>مراسلة فيوتشر كيت <svg class="icon"><use href="#diagonal"/></svg></a>
           <a id="store-map" class="line-link" target="_blank" rel="noopener noreferrer" hidden>موقع المعرض على الخريطة <svg class="icon"><use href="#diagonal"/></svg></a>
         </div>
-        <form id="quote-form" class="quote-form">
+        <form id="quote-form" class="quote-form" aria-labelledby="quote-form-title">
+          <h3 id="quote-form-title">طلب عرض سعر</h3>
           <noscript><p>فعّل JavaScript لاستخدام نموذج الطلب.</p></noscript>
           <div class="fields">
             <label>الاسم <input name="name" required autocomplete="name" maxlength="70"></label>
@@ -164,14 +169,17 @@
   <footer>
     <div class="wrap footer-inner">
       <a class="brand" href="#top" aria-label="فيوتشر كيت، أعلى الصفحة"><img src="assets/logo-light.png" alt="فيوتشر كيت" width="960" height="315"></a>
-      <p>تصميم وتفصيل مطابخ في الرياض</p>
-      <button type="button" class="footer-link" id="open-privacy" aria-haspopup="dialog">خصوصية الطلب</button>
+      <nav class="footer-nav" aria-label="روابط التذييل">
+        <a href="#kitchens">التصاميم</a><a href="#faq">الأسئلة الشائعة</a>
+        <button type="button" class="footer-link" id="open-privacy" aria-haspopup="dialog">خصوصية الطلب</button>
+      </nav>
+      <p>الرياض، السعودية</p>
     </div>
   </footer>
   <dialog id="design-dialog" aria-labelledby="design-title">
     <div class="dialog-design">
       <button type="button" class="close" data-close aria-label="إغلاق"><svg class="icon"><use href="#x"/></svg></button>
-      <img id="design-image" src="assets/ivory.webp" alt="" width="718" height="724">
+      <img id="design-image" src="assets/collection-ivory.webp" alt="" width="718" height="724">
       <div class="dialog-copy">
         <h2 id="design-title"></h2><p id="design-description"></p>
         <button type="button" id="pick-design" class="button button-dark">أضف التصميم لطلبي <svg class="icon"><use href="#arrow"/></svg></button>

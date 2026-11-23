@@ -32,32 +32,56 @@ document.addEventListener('keydown', event => {
 
 const filters = [...document.querySelectorAll('[data-filter]')];
 const designs = [...document.querySelectorAll('[data-category]')];
+const gallery = document.querySelector('.gallery');
 for (const button of filters) {
   button.addEventListener('click', () => {
     const filter = button.dataset.filter;
+    gallery.classList.toggle('is-filtered', filter !== 'all');
     for (const item of filters) item.setAttribute('aria-pressed', String(item === button));
     for (const design of designs) design.hidden = filter !== 'all' && design.dataset.category !== filter;
   });
 }
 
-const materialCopy = {
-  fronts: ['مطفي أو بنقشة خشب؟', 'المطفي يعطي الواجهة لونًا هادئًا، وضوء النهار يبرز نقشة الخشب. جرّب تفتح وتقفل عيّنة الباب عشان تشوف الحواف وتحس بمسكته.'],
-  tops: ['سطح العمل', 'الكوارتز والبورسلان والحجر خيارات تختلف في العناية اليومية. حدّد أماكن الحوض والموقد وشكل الحافة قبل قص السطح.'],
-  fittings: ['التجهيزات الداخلية', 'درج عميق للقدور، وفواصل لأدوات الطبخ، وسلة سحب للتخزين. جرّب حركة الدرج والمفصلة واختر ما يناسب الأشياء اللي تستخدمها كل يوم.'],
+const materials = {
+  fronts: {
+    title: 'مطفي أو بنقشة خشب؟',
+    description: 'المطفي يخفّف انعكاس الإضاءة، وخشب الجوز يضيف ملمسًا واضحًا. جرّب فتح باب العيّنة حتى تشوف الحواف وتحس بمسكة الباب.',
+    image: 'assets/finish-fronts.webp',
+    alt: 'تفصيل واجهات خضراء مطفية مع حافة من الجوز',
+    caption: 'أخضر مطفي مع حافة جوز',
+  },
+  tops: {
+    title: 'سطح العمل',
+    description: 'الكوارتز والبورسلان والحجر خيارات تختلف في العناية اليومية. حدّد أماكن الحوض والموقد وشكل الحافة قبل قص السطح.',
+    image: 'assets/finish-tops.webp',
+    alt: 'سطح من الترافرتين بلون كريمي وحافة مستقيمة',
+    caption: 'سطح ترافرتين مصقول مطفي',
+  },
+  fittings: {
+    title: 'التجهيزات الداخلية',
+    description: 'درج عميق للقدور، وفواصل لأدوات الطبخ، وسلة سحب للتخزين. جرّب حركة الدرج والمفصلة واختر ما يناسب الأشياء اللي تستخدمها كل يوم.',
+    image: 'assets/materials.webp',
+    alt: 'درج جوز مفتوح بفواصل داخلية لأدوات الطبخ',
+    caption: 'درج بفواصل داخلية',
+  },
 };
 const materialTabs = [...document.querySelectorAll('[data-material]')];
+const materialImage = document.querySelector('#material-image');
 for (const button of materialTabs) {
   button.addEventListener('click', () => {
-    const [title, description] = materialCopy[button.dataset.material];
+    const material = materials[button.dataset.material];
     for (const tab of materialTabs) tab.setAttribute('aria-pressed', String(tab === button));
-    document.querySelector('#material-name').textContent = title;
-    document.querySelector('#material-description').textContent = description;
+    document.querySelector('#material-name').textContent = material.title;
+    document.querySelector('#material-description').textContent = material.description;
+    materialImage.src = material.image;
+    materialImage.alt = material.alt;
+    document.querySelector('#material-caption').textContent = material.caption;
   });
 }
 
 const designCopy = {
-  ivory: 'الخزائن على جدارين والوسط مفتوح للحركة. الواجهات العاجية والسطح الفاتح خيار مناسب إذا كان ضوء النهار محدود.',
-  walnut: 'واجهات بلون الجوز مع سطح فاتح للتحضير. إذا تطبخ يوميًا، خلّ أدراج القدور قريبة من الموقد.',
+  ivory: 'الخزائن على جدارين والوسط مفتوح للحركة. الواجهات الرملية والسطح الفاتح خيار مناسب إذا كان ضوء النهار محدود.',
+  walnut: 'الخزائن على ثلاثة جدران بحيث تبقى مناطق الغسيل والطبخ والتحضير قريبة منك. تأكّد إن فيه مساحة كافية للوقوف وفتح الأدراج في الوسط.',
   island: 'تكسب سطح تحضير إضافي، وتقدر تضيف كراسي على جهة الجلسة. احسب الممر حول الجزيرة حتى تفتح الأدراج والأجهزة براحة.',
 };
 const form = document.querySelector('#quote-form');
