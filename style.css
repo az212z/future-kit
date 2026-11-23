@@ -53,7 +53,7 @@ nav a:hover, .line-link:hover { text-decoration: underline; text-underline-offse
 .hero-text { display: flex; flex-direction: column; justify-content: center; align-items: flex-start; padding: 58px max(var(--gutter), calc((100vw - 1320px) / 2)) 58px clamp(24px, 4vw, 70px); background: var(--cream); }
 .location { display: flex; align-items: center; gap: 8px; color: var(--green); font-size: 15px; font-weight: 600; }
 .location .icon { width: 18px; height: 18px; }
-.hero h1 { max-width: 7.6em; margin-block: 20px 19px; color: var(--green); font-size: clamp(49px, 5.65vw, 96px); font-weight: 700; line-height: 1.12; }
+.hero h1 { max-width: 7.6em; text-wrap: balance; margin-block: 20px 19px; color: var(--green); font-size: clamp(49px, 5.65vw, 96px); font-weight: 700; line-height: 1.12; }
 .hero-summary { max-width: 24em; font-size: clamp(17px, 1.45vw, 21px); color: var(--muted); }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 14px 22px; align-items: center; margin-block-start: 32px; }
 .line-link { display: inline-flex; min-height: 42px; align-items: center; gap: 10px; font-weight: 600; text-decoration: none; }
