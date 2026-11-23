@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="ar-SA" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f4f1e7">
+  <title>طلب عرض سعر | فيوتشر كيت</title>
+  <meta name="description" content="جهّز طلب عرض سعر لمطبخ جديد أو لتجديد مطبخ في الرياض، وأضف المقاسات والتصميم المفضل.">
+  <meta property="og:title" content="طلب عرض سعر | فيوتشر كيت">
+  <meta property="og:description" content="جهّز طلب عرض سعر لمطبخ جديد أو لتجديد مطبخ في الرياض، وأضف المقاسات والتصميم المفضل.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://az212z.github.io/future-kit/request.html">
+  <meta property="og:image" content="https://az212z.github.io/future-kit/assets/room.webp">
+  <link rel="canonical" href="https://az212z.github.io/future-kit/request.html">
+  <link rel="icon" href="assets/mark.png" type="image/png">
+  <link rel="preload" href="assets/noto-naskh-arabic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="fonts.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="config.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">انتقل إلى المحتوى</a>
+  <svg class="symbols" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="arrow" viewBox="0 0 24 24"><path d="M20 12H4m0 0 6-6m-6 6 6 6"/></symbol>
+    <symbol id="diagonal" viewBox="0 0 24 24"><path d="M18 18 6 6m0 10V6h10"/></symbol>
+    <symbol id="pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 11-8 11S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+    <symbol id="menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="x" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
+    <symbol id="plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  </svg>
+  <header class="header" id="top">
+    <div class="header-inner wrap">
+      <a class="brand" href="./" aria-label="فيوتشر كيت، الرئيسية"><img src="assets/logo.png" width="960" height="315" alt="فيوتشر كيت"></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation" aria-label="القائمة"><svg class="icon" aria-hidden="true"><use href="#menu"/></svg></button>
+      <nav id="navigation" aria-label="القائمة الرئيسية">
+        <a href="./">الرئيسية</a>
+        <a href="designs.html">التصاميم</a>
+        <a href="materials.html">الخامات</a>
+        <a href="request.html" aria-current="page" class="mobile-quote">طلب عرض سعر</a>
+      </nav>
+      <a class="button button-outline head-quote" href="request.html" aria-current="page">طلب عرض سعر <svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></a>
+    </div>
+  </header>
+  <main id="main">
+    <section class="wrap request-page">
+      <div class="page-intro">
+        <h1>طلب عرض سعر</h1>
+        <p>أضف بيانات المشروع والمقاسات المتوفرة. ستظهر تفاصيل الطلب للمراجعة قبل مشاركتها.</p>
+      </div>
+      <div class="quote-grid">
+        <form id="quote-form" class="quote-form" aria-labelledby="quote-form-title">
+          <h2 id="quote-form-title">بيانات المشروع</h2>
+          <noscript><p>يرجى تفعيل JavaScript لاستخدام نموذج الطلب.</p></noscript>
+          <div class="fields">
+            <label>الاسم <input name="name" required autocomplete="name" maxlength="70"></label>
+            <label>رقم الجوال <input name="phone" type="tel" required autocomplete="tel" inputmode="tel" dir="ltr" placeholder="05XXXXXXXX" maxlength="24"></label>
+            <label>الحي في الرياض <input name="district" required autocomplete="address-level3" maxlength="70"></label>
+            <label>نوع المشروع <select name="project" required><option value="">اختر نوع المشروع</option><option>مطبخ جديد</option><option>تجديد مطبخ</option></select></label>
+          </div>
+          <label>المقاسات وملاحظات المشروع <small>(اختياري)</small><textarea name="notes" rows="4" maxlength="400" placeholder="المقاسات التقريبية، التوزيع المفضل، أو نوع الخامة"></textarea></label>
+          <div class="selection" id="selection" hidden><span id="selected-design"></span><button type="button" id="clear-design">إزالة التصميم</button></div>
+          <div class="form-end"><button class="button button-dark" type="submit" disabled>مراجعة الطلب <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></button></div>
+        </form>
+        <aside class="quote-aside">
+          <h2>قبل تجهيز الطلب</h2>
+          <ul>
+            <li>تكفي المقاسات التقريبية إن كانت متوفرة.</li>
+            <li>يمكن إضافة تصميم مرجعي من <a href="designs.html">صفحة التصاميم</a>.</li>
+            <li id="quote-method">يمكن نسخ الطلب أو حفظه بعد المراجعة.</li>
+          </ul>
+          <a id="store-whatsapp" class="line-link" target="_blank" rel="noopener noreferrer" hidden>واتساب فيوتشر كيت <svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></a>
+          <a id="store-map" class="line-link" target="_blank" rel="noopener noreferrer" hidden>موقع المعرض <svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></a>
+        </aside>
+      </div>
+    </section>
+    <section id="faq" class="faq">
+      <div class="wrap faq-grid section">
+        <h2>الأسئلة الشائعة</h2>
+        <div class="faq-list">
+          <details><summary>على أي أساس يُحسب السعر؟ <svg class="icon" aria-hidden="true"><use href="#plus"/></svg></summary><p>يُحسب السعر وفق المقاسات ونوع الخامات وعدد وحدات التخزين ومواصفات سطح العمل والتجهيزات الداخلية.</p></details>
+          <details><summary>هل يلزم توفر المقاسات عند تقديم الطلب؟ <svg class="icon" aria-hidden="true"><use href="#plus"/></svg></summary><p>يمكن تجهيز الطلب باسم الحي ووصف المشروع. تُعتمد مقاسات التصنيع بعد قياس الموقع.</p></details>
+          <details><summary>متى تتحدد مدة التنفيذ؟ <svg class="icon" aria-hidden="true"><use href="#plus"/></svg></summary><p>تتحدد بعد اعتماد التوزيع والخامات ومراجعة جاهزية الموقع للتركيب.</p></details>
+          <details><summary>متى تُحدد مقاسات الأجهزة؟ <svg class="icon" aria-hidden="true"><use href="#plus"/></svg></summary><p>قبل اعتماد توزيع الخزائن، خصوصًا للأجهزة المدمجة، لضبط مقاسات الفتحات وتحديد متطلبات التهوية والتوصيلات.</p></details>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="wrap footer-inner">
+      <div class="footer-brand">
+        <a class="brand" href="./" aria-label="فيوتشر كيت، الرئيسية"><img src="assets/logo-light.png" alt="فيوتشر كيت" width="960" height="315"></a>
+        <p>تصميم وتفصيل المطابخ في الرياض</p>
+      </div>
+      <nav class="footer-nav" aria-label="روابط التذييل">
+        <a href="designs.html">التصاميم</a>
+        <a href="materials.html">الخامات</a>
+        <a href="./#process">مراحل التنفيذ</a>
+        <a href="request.html#faq">الأسئلة الشائعة</a>
+        <button type="button" class="footer-link" id="open-privacy" aria-haspopup="dialog">خصوصية الطلب</button>
+      </nav>
+    </div>
+  </footer>
+  <dialog id="request-dialog" aria-labelledby="request-title">
+    <div class="dialog-copy">
+      <button type="button" class="close" data-close aria-label="إغلاق"><svg class="icon"><use href="#x"/></svg></button>
+      <h2 id="request-title">مراجعة الطلب</h2>
+      <p id="request-note"></p>
+      <pre id="request-text" tabindex="0" aria-label="تفاصيل الطلب"></pre>
+      <div class="dialog-actions">
+        <a class="button button-dark" id="send-whatsapp" target="_blank" rel="noopener noreferrer" hidden>فتح واتساب <svg class="icon"><use href="#diagonal"/></svg></a>
+        <button type="button" class="button button-outline" id="copy-request">نسخ الطلب</button>
+        <button type="button" class="button button-outline" id="download-request">تنزيل الطلب</button>
+      </div>
+      <p class="feedback" id="request-status" role="status"></p>
+    </div>
+  </dialog>
+  <dialog id="privacy-dialog" aria-labelledby="privacy-title">
+    <div class="dialog-copy">
+      <button type="button" class="close" data-close aria-label="إغلاق"><svg class="icon"><use href="#x"/></svg></button>
+      <h2 id="privacy-title">خصوصية الطلب</h2>
+      <p>يعالج الموقع بيانات النموذج داخل متصفحك لتجهيز الطلب. يمكنك نسخ الطلب أو تنزيله، وإذا اخترت فتح واتساب تنتقل التفاصيل إليه لمراجعتها وإرسالها.</p>
+    </div>
+  </dialog>
+</body>
+</html>
