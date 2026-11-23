@@ -1,0 +1,4 @@
+window.futureKitConfig = {
+  whatsapp: '',
+  mapUrl: '',
+};
