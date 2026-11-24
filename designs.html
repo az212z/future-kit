@@ -46,64 +46,202 @@
   </header>
   <main id="main">
     <section class="wrap catalog-page">
-      <div class="page-intro">
+      <div class="page-intro intro-with-image catalog-intro">
         <div class="intro-copy">
-        <h1>تصاميم المطابخ</h1>
-        <p>اختر توزيعًا يناسب مساحة مطبخك، ثم أضف التصميم إلى طلب عرض السعر.</p>
+          <h1>تصاميم المطابخ</h1>
+          <p>تصفّح التوزيعات والتشطيبات، وأضف النموذج الذي يناسبك إلى طلب عرض السعر.</p>
         </div>
+        <img class="intro-image" src="assets/room.webp" alt="" width="1816" height="767" fetchpriority="high">
       </div>
       <div class="catalog-toolbar">
-        <div class="filters" role="group" aria-label="تصفية التصاميم">
-          <button type="button" aria-pressed="true" data-filter="all">جميع التصاميم</button>
-          <button type="button" aria-pressed="false" data-filter="linear">مطبخ مستقيم</button>
-          <button type="button" aria-pressed="false" data-filter="galley">مطبخ متوازٍ</button>
-          <button type="button" aria-pressed="false" data-filter="corner">مطبخ زاوية</button>
-          <button type="button" aria-pressed="false" data-filter="island">مطبخ بجزيرة</button>
-          <button type="button" aria-pressed="false" data-filter="u-shape">مطبخ على ثلاثة جدران</button>
+        <div class="catalog-controls">
+          <div class="filters" role="group" aria-label="التصفية حسب توزيع المطبخ">
+            <button type="button" aria-pressed="true" data-filter="all">جميع التوزيعات</button>
+            <button type="button" aria-pressed="false" data-filter="island">بجزيرة</button>
+            <button type="button" aria-pressed="false" data-filter="corner">زاوية</button>
+            <button type="button" aria-pressed="false" data-filter="linear">مستقيم</button>
+            <button type="button" aria-pressed="false" data-filter="galley">متوازٍ</button>
+            <button type="button" aria-pressed="false" data-filter="u-shape">ثلاثة جدران</button>
+          </div>
+          <label class="palette-filter">درجات الألوان
+            <select id="palette-filter">
+              <option value="all">جميع الدرجات</option>
+              <option value="light">فاتحة</option>
+              <option value="earth">ترابية وخضراء</option>
+              <option value="dark">داكنة</option>
+            </select>
+          </label>
         </div>
-        <p class="gallery-note">الصور تصوّرات تصميمية.</p>
+        <div class="catalog-status">
+          <p id="design-count" role="status">١٧ تصميمًا في ٥ توزيعات</p>
+          <p class="gallery-note">الصور تصوّرات تصميمية.</p>
+        </div>
       </div>
-      <div class="gallery">
-        <article class="design design-featured" data-category="island">
-          <img src="assets/collection-island.webp" alt="مطبخ بخزائن خضراء داكنة وجزيرة من الترافرتين" width="718" height="724" loading="lazy">
-          <div class="design-body">
-            <p class="eyebrow">مطبخ بجزيرة</p>
-            <h2>جزيرة من الترافرتين</h2>
-            <p>جزيرة للتحضير والجلوس تقابل جدار الخزائن والأجهزة.</p>
-            <button type="button" class="line-link design-button" data-design="island" aria-haspopup="dialog">تفاصيل التصميم <svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></button>
-          </div>
-        </article>
-        <article class="design design-featured" data-category="corner">
-          <img src="assets/collection-ivory.webp" alt="مطبخ زاوية بواجهات رملية ولمسات خشبية" width="718" height="724" loading="lazy">
-          <div class="design-body">
-            <p class="eyebrow">مطبخ زاوية</p>
-            <h2>واجهات رملية مطفية</h2>
-            <p>خزائن على جدارين متجاورين تترك وسط المطبخ مفتوحًا.</p>
-            <button type="button" class="line-link design-button" data-design="ivory" aria-haspopup="dialog">تفاصيل التصميم <svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></button>
-          </div>
-        </article>
-        <article class="design" data-category="u-shape">
-          <img src="assets/collection-walnut.webp" alt="مطبخ على ثلاثة جدران بواجهات جوز وبلاط فاتح" width="718" height="724" loading="lazy">
-          <div class="design-body">
-            <p class="eyebrow">مطبخ على ثلاثة جدران</p>
-            <h2>واجهات بلون الجوز</h2>
-            <p>توزيع يُبقي الحوض والموقد وسطح التحضير على مسافة قريبة.</p>
-            <button type="button" class="line-link design-button" data-design="walnut" aria-haspopup="dialog">تفاصيل التصميم <svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></button>
-          </div>
-        </article>
-        <article class="design" data-category="linear">
-          <img src="assets/collection-linear.webp" alt="خزائن فاتحة وأجهزة مرتبة على جدار واحد" width="800" height="800" loading="lazy">
-          <div class="design-body"><p class="eyebrow">مطبخ مستقيم</p><h2>بلوط فاتح على جدار واحد</h2><p>تجتمع الأجهزة والخزائن على امتداد جدار واحد، ويظل الجانب المقابل مفتوحًا.</p>
-            <button type="button" class="line-link design-button" data-design="linear" aria-haspopup="dialog">تفاصيل التصميم <svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></button>
-          </div>
-        </article>
-        <article class="design" data-category="galley">
-          <img src="assets/collection-galley.webp" alt="خزائن مطبخ متوازية على جانبي الممر" width="800" height="800" loading="lazy">
-          <div class="design-body"><p class="eyebrow">مطبخ متوازٍ</p><h2>خشب داكن على جدارين متقابلين</h2><p>يوزّع السطحان المتقابلان مناطق التحضير والغسيل والتخزين على جانبي الممر.</p>
-            <button type="button" class="line-link design-button" data-design="galley" aria-haspopup="dialog">تفاصيل التصميم <svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></button>
-          </div>
-        </article>
+      <div id="catalog-empty" class="catalog-empty" hidden>
+        <p>لا توجد تصاميم تجمع هذا التوزيع وهذه الدرجة اللونية.</p>
+        <button type="button" class="button button-outline" id="reset-filters">عرض جميع التصاميم</button>
       </div>
+      <section class="catalog-group" data-design-group="island" aria-labelledby="group-island">
+        <div class="group-heading"><h2 id="group-island">مطابخ بجزيرة</h2><p>تضيف الجزيرة مساحة للتحضير أو الجلوس، ويتحدد حجمها بعد مراجعة الممرات حولها.</p></div>
+        <div class="gallery">
+          <article class="design" data-category="island" data-palette="earth">
+            <img src="assets/collection-island.webp" alt="ترافرتين فاتح مع واجهات خضراء وألواح من الجوز." width="718" height="724" loading="lazy" decoding="async">
+            <div class="design-body">
+              <h3>جزيرة من الترافرتين</h3>
+              <p>ترافرتين فاتح مع واجهات خضراء وألواح من الجوز.</p>
+              <button type="button" class="line-link design-button" data-design="island" aria-haspopup="dialog">عرض التفاصيل <svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></button>
+            </div>
+          </article>
+          <article class="design" data-category="island" data-palette="light">
+            <img src="assets/collection-island-ivory.webp" alt="خزائن عاجية وجزيرة بيضاء بإضاءة طبيعية." width="506" height="506" loading="lazy" decoding="async">
+            <div class="design-body">
+              <h3>جزيرة عاجية بسطح ممتد</h3>
+              <p>خزائن عاجية وجزيرة بيضاء بإضاءة طبيعية.</p>
+              <button type="button" class="line-link design-button" data-design="island-ivory" aria-haspopup="dialog">عرض التفاصيل <svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></button>
+            </div>
+          </article>
+          <article class="design" data-category="island" data-palette="dark">
+            <img src="assets/collection-island-graphite.webp" alt="حجر فاتح يقابل جدار خزائن بلون الفحم وخشب داكن." width="506" height="506" loading="lazy" decoding="async">
+            <div class="design-body">
+              <h3>جزيرة حجرية وواجهات فحمية</h3>
+              <p>حجر فاتح يقابل جدار خزائن بلون الفحم وخشب داكن.</p>
+              <button type="button" class="line-link design-button" data-design="island-graphite" aria-haspopup="dialog">عرض التفاصيل <svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></button>
+            </div>
+          </article>
+          <article class="design" data-category="island" data-palette="earth">
+            <img src="assets/collection-island-walnut.webp" alt="سطح فاتح بعروق واضحة مع خزائن خشبية طويلة." width="506" height="506" loading="lazy" decoding="async">
+            <div class="design-body">
+              <h3>جزيرة عريضة مع خزائن الجوز</h3>
+              <p>سطح فاتح بعروق واضحة مع خزائن خشبية طويلة.</p>
+              <button type="button" class="line-link design-button" data-design="island-walnut" aria-haspopup="dialog">عرض التفاصيل <svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></button>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="catalog-group" data-design-group="corner" aria-labelledby="group-corner">
+        <div class="group-heading"><h2 id="group-corner">مطابخ زاوية</h2><p>خزائن على جدارين متجاورين تترك وسط المطبخ مفتوحًا.</p></div>
+        <div class="gallery">
+          <article class="design" data-category="corner" data-palette="light">
+            <img src="assets/collection-ivory.webp" alt="خزائن رملية مع تفاصيل خشبية عند زاوية المطبخ." width="718" height="724" loading="lazy" decoding="async">
+            <div class="design-body">
+              <h3>واجهات رملية مطفية</h3>
+              <p>خزائن رملية مع تفاصيل خشبية عند زاوية المطبخ.</p>
+              <button type="button" class="line-link design-button" data-design="ivory" aria-haspopup="dialog">عرض التفاصيل <svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></button>
+            </div>
+          </article>
+          <article class="design" data-category="corner" data-palette="light">
+            <img src="assets/collection-corner-oak.webp" alt="خشب فاتح وسطح حجري يكملان امتداد الخزائن." width="506" height="506" loading="lazy" decoding="async">
+            <div class="design-body">
+              <h3>زاوية من البلوط الفاتح</h3>
+              <p>خشب فاتح وسطح حجري يكملان امتداد الخزائن.</p>
+              <button type="button" class="line-link design-button" data-design="corner-oak" aria-haspopup="dialog">عرض التفاصيل <svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></button>
+            </div>
+          </article>
+          <article class="design" data-category="corner" data-palette="dark">
+            <img src="assets/collection-corner-espresso.webp" alt="واجهات جوز داكنة وسطح بلون رمادي دافئ." width="506" height="506" loading="lazy" decoding="async">
+            <div class="design-body">
+              <h3>زاوية بواجهات جوز داكنة</h3>
+              <p>واجهات جوز داكنة وسطح بلون رمادي دافئ.</p>
+              <button type="button" class="line-link design-button" data-design="corner-espresso" aria-haspopup="dialog">عرض التفاصيل <svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></button>
+            </div>
+          </article>
+          <article class="design" data-category="corner" data-palette="earth">
+            <img src="assets/collection-corner-taupe.webp" alt="واجهات هادئة مع لمسات من الخشب عند الزاوية." width="506" height="506" loading="lazy" decoding="async">
+            <div class="design-body">
+              <h3>زاوية بخزائن رمادية دافئة</h3>
+              <p>واجهات هادئة مع لمسات من الخشب عند الزاوية.</p>
+              <button type="button" class="line-link design-button" data-design="corner-taupe" aria-haspopup="dialog">عرض التفاصيل <svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></button>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="catalog-group" data-design-group="linear" aria-labelledby="group-linear">
+        <div class="group-heading"><h2 id="group-linear">مطابخ مستقيمة</h2><p>تجتمع الخزائن والأجهزة على جدار واحد، ويظل الجانب المقابل مفتوحًا.</p></div>
+        <div class="gallery">
+          <article class="design" data-category="linear" data-palette="light">
+            <img src="assets/collection-linear.webp" alt="سطح عمل طولي وخزائن مدمجة بواجهات خشبية فاتحة." width="800" height="800" loading="lazy" decoding="async">
+            <div class="design-body">
+              <h3>بلوط فاتح على جدار واحد</h3>
+              <p>سطح عمل طولي وخزائن مدمجة بواجهات خشبية فاتحة.</p>
+              <button type="button" class="line-link design-button" data-design="linear" aria-haspopup="dialog">عرض التفاصيل <svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></button>
+            </div>
+          </article>
+          <article class="design" data-category="linear" data-palette="light">
+            <img src="assets/collection-linear-shaker.webp" alt="خزائن عاجية مؤطّرة مرتّبة على امتداد جدار واحد." width="506" height="506" loading="lazy" decoding="async">
+            <div class="design-body">
+              <h3>مطبخ مستقيم بواجهات مؤطّرة</h3>
+              <p>خزائن عاجية مؤطّرة مرتّبة على امتداد جدار واحد.</p>
+              <button type="button" class="line-link design-button" data-design="linear-shaker" aria-haspopup="dialog">عرض التفاصيل <svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></button>
+            </div>
+          </article>
+          <article class="design" data-category="linear" data-palette="earth">
+            <img src="assets/collection-linear-ash.webp" alt="خزائن بلون خشبي دافئ تمتد على جدار واحد." width="506" height="506" loading="lazy" decoding="async">
+            <div class="design-body">
+              <h3>خشب فاتح وأجهزة مدمجة</h3>
+              <p>خزائن بلون خشبي دافئ تمتد على جدار واحد.</p>
+              <button type="button" class="line-link design-button" data-design="linear-ash" aria-haspopup="dialog">عرض التفاصيل <svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></button>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="catalog-group" data-design-group="galley" aria-labelledby="group-galley">
+        <div class="group-heading"><h2 id="group-galley">مطابخ متوازية</h2><p>وحدات على جدارين متقابلين مع ممر عمل في الوسط.</p></div>
+        <div class="gallery">
+          <article class="design" data-category="galley" data-palette="dark">
+            <img src="assets/collection-galley.webp" alt="وحدات متقابلة مع أسطح فاتحة وممر يطل على نافذة." width="800" height="800" loading="lazy" decoding="async">
+            <div class="design-body">
+              <h3>خشب داكن على جدارين متقابلين</h3>
+              <p>وحدات متقابلة مع أسطح فاتحة وممر يطل على نافذة.</p>
+              <button type="button" class="line-link design-button" data-design="galley" aria-haspopup="dialog">عرض التفاصيل <svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></button>
+            </div>
+          </article>
+          <article class="design" data-category="galley" data-palette="earth">
+            <img src="assets/collection-galley-sage.webp" alt="أخضر مريمي مقابل سطح فاتح على امتداد الممر." width="506" height="506" loading="lazy" decoding="async">
+            <div class="design-body">
+              <h3>مطبخ متوازٍ بواجهات مريمية</h3>
+              <p>أخضر مريمي مقابل سطح فاتح على امتداد الممر.</p>
+              <button type="button" class="line-link design-button" data-design="galley-sage" aria-haspopup="dialog">عرض التفاصيل <svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></button>
+            </div>
+          </article>
+          <article class="design" data-category="galley" data-palette="dark">
+            <img src="assets/collection-galley-warmwood.webp" alt="وحدات خشبية على جانبي الممر، مع إضاءة عند نهايته." width="506" height="506" loading="lazy" decoding="async">
+            <div class="design-body">
+              <h3>مطبخ متوازٍ بخشب دافئ</h3>
+              <p>وحدات خشبية على جانبي الممر، مع إضاءة عند نهايته.</p>
+              <button type="button" class="line-link design-button" data-design="galley-warmwood" aria-haspopup="dialog">عرض التفاصيل <svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></button>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="catalog-group" data-design-group="u-shape" aria-labelledby="group-u-shape">
+        <div class="group-heading"><h2 id="group-u-shape">مطابخ على ثلاثة جدران</h2><p>ثلاثة أضلاع توزّع العمل والتخزين حول مساحة مركزية.</p></div>
+        <div class="gallery">
+          <article class="design" data-category="u-shape" data-palette="dark">
+            <img src="assets/collection-walnut.webp" alt="خزائن من ثلاث جهات، مع سطح فاتح وبلاط خلفي هادئ." width="718" height="724" loading="lazy" decoding="async">
+            <div class="design-body">
+              <h3>واجهات بلون الجوز</h3>
+              <p>خزائن من ثلاث جهات، مع سطح فاتح وبلاط خلفي هادئ.</p>
+              <button type="button" class="line-link design-button" data-design="walnut" aria-haspopup="dialog">عرض التفاصيل <svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></button>
+            </div>
+          </article>
+          <article class="design" data-category="u-shape" data-palette="light">
+            <img src="assets/collection-u-sand.webp" alt="واجهات رملية وسطح فاتح يمتد حول منطقة العمل." width="506" height="506" loading="lazy" decoding="async">
+            <div class="design-body">
+              <h3>خزائن رملية على ثلاثة جدران</h3>
+              <p>واجهات رملية وسطح فاتح يمتد حول منطقة العمل.</p>
+              <button type="button" class="line-link design-button" data-design="u-sand" aria-haspopup="dialog">عرض التفاصيل <svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></button>
+            </div>
+          </article>
+          <article class="design" data-category="u-shape" data-palette="earth">
+            <img src="assets/collection-u-forest.webp" alt="واجهات خضراء داكنة يوازنها حجر فاتح على ثلاثة جوانب." width="506" height="506" loading="lazy" decoding="async">
+            <div class="design-body">
+              <h3>أخضر داكن مع سطح حجري</h3>
+              <p>واجهات خضراء داكنة يوازنها حجر فاتح على ثلاثة جوانب.</p>
+              <button type="button" class="line-link design-button" data-design="u-forest" aria-haspopup="dialog">عرض التفاصيل <svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></button>
+            </div>
+          </article>
+        </div>
+      </section>
       <div class="quiet-cta design-next"><div><h2>أي توزيع يناسب مطبخك؟</h2><p>اختر شكل المساحة وما تحتاجه من تحضير وتخزين أو جلوس.</p></div><a href="planning.html" class="button button-dark">دليل التخطيط <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></a></div>
     </section>
   </main>
@@ -128,6 +266,7 @@
       <button type="button" class="close" data-close aria-label="إغلاق"><svg class="icon" aria-hidden="true"><use href="#x"/></svg></button>
       <img id="design-image" src="assets/collection-island.webp" alt="" width="718" height="724">
       <div class="dialog-copy">
+        <p class="eyebrow" id="design-layout"></p>
         <h2 id="design-title">تفاصيل التصميم</h2><p id="design-description"></p>
         <a href="request.html" id="pick-design" class="button button-dark">إضافة التصميم إلى الطلب <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></a>
       </div>

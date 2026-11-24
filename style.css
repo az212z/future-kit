@@ -279,14 +279,9 @@ section.wrap.page-intro { width: min(100% - 2 * var(--gutter), 1395px); }
 .catalog-toolbar { border-top: 0; }
 .filters button { border-radius: 6px; }
 .gallery { display: grid; grid-template-columns: repeat(6,minmax(0,1fr)); gap: clamp(17px, 2.4vw, 34px); }
-.gallery:has(.design[hidden]) { grid-template-columns: minmax(0, 700px); }
 .design { grid-column: span 2; min-width: 0; display: flex; flex-direction: column; background: var(--paper); border-radius: 15px; overflow: clip; }
-.design-featured { grid-column: span 3; }
-.gallery:has(.design[hidden]) .design { grid-column: auto; }
 .design > img { width: 100%; aspect-ratio: 1.21; object-fit: cover; background: #cdc5b2; }
-.design-featured > img { aspect-ratio: 1.48; }
 .design-body { display: flex; flex: 1; flex-direction: column; align-items: flex-start; gap: 4px; padding: clamp(15px, 2vw, 27px); }
-.design-body h2 { font-size: clamp(29px, 3.2vw, 48px); text-wrap: initial; }
 .design-body > p:not(.eyebrow) { color: var(--muted); }
 .design-body .line-link { margin-block-start: auto; }
 
@@ -320,8 +315,6 @@ input, select, textarea { border-radius: 6px; }
   .hero-title h1 { font-size: clamp(41px, 6.7vw, 65px); margin-top: 7px; }
   .hero-links { margin-top: 13px; gap: 5px 14px; }
   .gallery { grid-template-columns: repeat(2,minmax(0,1fr)); }
-  .design, .design-featured { grid-column: auto; }
-  .design-featured > img { aspect-ratio: 1.21; }
   .process-content { grid-column: auto; }
   .process-grid figure { grid-row: auto; }
 }
@@ -336,4 +329,42 @@ input, select, textarea { border-radius: 6px; }
   .hero-image img { aspect-ratio: 1.45; }
   .planning-feature-grid { border-radius: 15px; }
   .process-grid { grid-template-columns: minmax(0,1fr); }
+}
+
+/* Grouped kitchen catalog */
+.catalog-intro { color: var(--cream); background: var(--dark); }
+.catalog-intro h1 { color: var(--cream); }
+.catalog-intro .intro-copy p { color: #e3e7da; }
+.catalog-intro .intro-image { aspect-ratio: 1.8; }
+.catalog-toolbar { display: grid; justify-content: stretch; gap: 12px; padding: 0 0 18px; }
+.catalog-controls { display: flex; justify-content: space-between; align-items: end; gap: 12px 24px; flex-wrap: wrap; }
+.palette-filter { min-width: 180px; font-size: 14px; }
+.palette-filter select { min-height: 43px; }
+.catalog-status { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 5px 16px; color: var(--muted); font-size: 14px; }
+.catalog-group { padding-block: clamp(24px, 4vw, 58px); border-top: 1px solid var(--line); }
+.group-heading { display: flex; align-items: end; justify-content: space-between; flex-wrap: wrap; gap: 9px 26px; margin-bottom: 20px; }
+.group-heading h2 { font-size: clamp(35px, 4.2vw, 60px); text-wrap: initial; }
+.group-heading p { max-width: 34em; color: var(--muted); }
+.catalog-group .gallery { grid-template-columns: repeat(3, minmax(0,1fr)); }
+.catalog-group .gallery:has(.design:nth-child(4):not([hidden])) { grid-template-columns: repeat(4, minmax(0,1fr)); }
+.catalog-group .gallery:has(.design[hidden]) { grid-template-columns: repeat(auto-fill,minmax(min(100%,300px),1fr)); }
+.catalog-group .design { grid-column: auto; }
+.catalog-group .design > img { aspect-ratio: 1.16; }
+.design-body h3 { font: 600 clamp(28px, 2.6vw, 41px)/1.2 var(--serif); text-wrap: pretty; }
+.design-body .design-button { margin-top: auto; padding-block-start: 6px; }
+.design-body .design-button:focus-visible { outline-offset: -1px; }
+.catalog-empty { padding: 20px; border-radius: 14px; background: #e3e9dd; }
+.catalog-empty p { margin-bottom: 10px; }
+#design-layout { margin-bottom: 8px; }
+@media (max-width: 1050px) {
+  .catalog-group .gallery:has(.design:nth-child(4):not([hidden])) { grid-template-columns: repeat(2, minmax(0,1fr)); }
+}
+@media (max-width: 810px) {
+  .catalog-group .gallery { grid-template-columns: repeat(2, minmax(0,1fr)); }
+}
+@media (max-width: 540px) {
+  .catalog-group .gallery, .catalog-group .gallery:has(.design:nth-child(4):not([hidden])), .catalog-group .gallery:has(.design[hidden]) { grid-template-columns: minmax(0,1fr); }
+  .catalog-group .design img { aspect-ratio: 1.38; }
+  .catalog-controls .filters { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); width: 100%; }
+  .palette-filter { min-width: 0; width: 100%; }
 }

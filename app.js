@@ -18,40 +18,145 @@ document.addEventListener('keydown', event => {
 });
 
 const filters = [...document.querySelectorAll('[data-filter]')];
-const designs = [...document.querySelectorAll('[data-category]')];
-for (const button of filters) {
-  button.addEventListener('click', () => {
-    const filter = button.dataset.filter;
-    for (const item of filters) item.setAttribute('aria-pressed', String(item === button));
-    for (const design of designs) design.hidden = filter !== 'all' && design.dataset.category !== filter;
+if (filters.length) {
+  const designs = [...document.querySelectorAll('[data-category]')];
+  const groups = [...document.querySelectorAll('[data-design-group]')];
+  const palette = document.querySelector('#palette-filter');
+  const count = document.querySelector('#design-count');
+  const empty = document.querySelector('#catalog-empty');
+  const numbers = new Intl.NumberFormat('ar-SA');
+  const search = new URLSearchParams(location.search);
+  const savedLayout = search.get('layout');
+  const savedPalette = search.get('tone');
+  let layout = filters.some(button => button.dataset.filter === savedLayout) ? savedLayout : 'all';
+  if ([...palette.options].some(option => option.value === savedPalette)) palette.value = savedPalette;
+
+  function filterCatalog(updateAddress) {
+    const tone = palette.value;
+    let visible = 0;
+    for (const button of filters) button.setAttribute('aria-pressed', String(button.dataset.filter === layout));
+    for (const design of designs) {
+      const matchesLayout = layout === 'all' || design.dataset.category === layout;
+      const matchesPalette = tone === 'all' || design.dataset.palette === tone;
+      design.hidden = !(matchesLayout && matchesPalette);
+      if (!design.hidden) visible += 1;
+    }
+    for (const group of groups) group.hidden = !group.querySelector('.design:not([hidden])');
+    count.textContent = visible === designs.length
+      ? numbers.format(visible) + ' تصميمًا في ' + numbers.format(groups.length) + ' توزيعات'
+      : 'عرض ' + numbers.format(visible) + ' من أصل ' + numbers.format(designs.length) + ' تصميمًا';
+    empty.hidden = visible > 0;
+    if (updateAddress) {
+      const url = new URL(location.href);
+      for (const [parameter, value] of [['layout', layout], ['tone', tone]]) {
+        if (value === 'all') url.searchParams.delete(parameter);
+        else url.searchParams.set(parameter, value);
+      }
+      history.replaceState(null, '', url);
+    }
+  }
+
+  for (const button of filters) {
+    button.addEventListener('click', () => {
+      layout = button.dataset.filter;
+      filterCatalog(true);
+    });
+  }
+  palette.addEventListener('change', () => filterCatalog(true));
+  document.querySelector('#reset-filters').addEventListener('click', () => {
+    layout = 'all';
+    palette.value = 'all';
+    filterCatalog(true);
+    filters[0].focus();
   });
+  filterCatalog(false);
 }
 
 const designCopy = {
-  island: {
-    layout: 'مطبخ بجزيرة',
-    title: 'جزيرة من الترافرتين',
-    description: 'تضيف الجزيرة مساحة للتحضير ومقاعد باتجاه الجلسة. يُحدد حجمها بعد حساب الممرات ومدى فتح الأدراج والأجهزة.',
+  "island": {
+    layout: "مطبخ بجزيرة",
+    title: "جزيرة من الترافرتين",
+    description: "تصلح الجزيرة للتحضير والجلوس. راجع عرض الممر ومساحة فتح الأدراج قبل تحديد حجمها.",
   },
-  ivory: {
-    layout: 'مطبخ زاوية',
-    title: 'واجهات رملية مطفية',
-    description: 'توزيع على جدارين متجاورين يترك وسط المطبخ مفتوحًا للحركة. تساعد الواجهات الفاتحة على إظهار تفاصيل الأبواب في المساحات محدودة الإضاءة.',
+  "island-ivory": {
+    layout: "مطبخ بجزيرة",
+    title: "جزيرة عاجية بسطح ممتد",
+    description: "يمتد السطح فوق جهة الجلوس. حدّد عدد المقاعد ومكانها قبل اعتماد طول الجزيرة.",
   },
-  walnut: {
-    layout: 'مطبخ على ثلاثة جدران',
-    title: 'واجهات بلون الجوز',
-    description: 'يجمع التوزيع الحوض والموقد وسطح التحضير على ثلاثة جدران. تُراجع المسافة بين الوحدات المتقابلة حتى يسهل فتحها والعمل بينها.',
+  "island-graphite": {
+    layout: "مطبخ بجزيرة",
+    title: "جزيرة حجرية وواجهات فحمية",
+    description: "تضم الوحدات الطويلة الأجهزة ومساحات التخزين، ويظل سطح الجزيرة متاحًا للتحضير.",
   },
-  linear: {
-    layout: 'مطبخ مستقيم',
-    title: 'بلوط فاتح على جدار واحد',
-    description: 'ترتيب الخزائن والأجهزة على جدار واحد يترك الفراغ المقابل مفتوحًا. يُراجع طول السطح المتاح بعد تحديد مقاسي الحوض والموقد.',
+  "island-walnut": {
+    layout: "مطبخ بجزيرة",
+    title: "جزيرة عريضة مع خزائن الجوز",
+    description: "تستوعب الجزيرة مساحة عمل مشتركة. حدّد موقع المقابس مع مسار التوصيلات قبل اعتماد التركيب.",
   },
-  galley: {
-    layout: 'مطبخ متوازٍ',
-    title: 'خشب داكن على جدارين متقابلين',
-    description: 'يتيح المطبخ المتوازي سطحَي عمل على جانبي الممر. عند القياس، نراجع المساحة بعد فتح الأدراج وباب غسالة الأطباق، ومكان الوقوف أمامها.',
+  "ivory": {
+    layout: "مطبخ زاوية",
+    title: "واجهات رملية مطفية",
+    description: "توزيع على جدارين مع مساحة مفتوحة في الوسط. افحص طريقة فتح خزانة الزاوية قبل اختيار التجهيز الداخلي.",
+  },
+  "corner-oak": {
+    layout: "مطبخ زاوية",
+    title: "زاوية من البلوط الفاتح",
+    description: "الركن يربط منطقتي التحضير والغسيل. راجع موضع الحوض بحيث يبقى سطح العمل متصلًا وقريبًا من الموقد.",
+  },
+  "corner-espresso": {
+    layout: "مطبخ زاوية",
+    title: "زاوية بواجهات جوز داكنة",
+    description: "يمكن توزيع الأدراج العميقة على الجانب الأقرب إلى الموقد. تساعد الإضاءة تحت الخزائن في توضيح سطح العمل الداكن.",
+  },
+  "corner-taupe": {
+    layout: "مطبخ زاوية",
+    title: "زاوية بخزائن رمادية دافئة",
+    description: "تركز الوحدات الطويلة التخزين في طرف المطبخ، وتترك الجزء الأقرب إلى الزاوية لسطح التحضير.",
+  },
+  "linear": {
+    layout: "مطبخ مستقيم",
+    title: "بلوط فاتح على جدار واحد",
+    description: "بعد وضع الحوض والموقد، تحقّق من طول سطح التحضير المتاح بينهما.",
+  },
+  "linear-shaker": {
+    layout: "مطبخ مستقيم",
+    title: "مطبخ مستقيم بواجهات مؤطّرة",
+    description: "يفيد توحيد مواقع الأجهزة على الجدار في إبقاء الفراغ المقابل متاحًا للحركة. راجع أماكن المقابس والشفاط مبكرًا.",
+  },
+  "linear-ash": {
+    layout: "مطبخ مستقيم",
+    title: "خشب فاتح وأجهزة مدمجة",
+    description: "استفد من ارتفاع الجدار للتخزين، وضع الأدوات اليومية في الوحدات الأسهل وصولًا.",
+  },
+  "galley": {
+    layout: "مطبخ متوازٍ",
+    title: "خشب داكن على جدارين متقابلين",
+    description: "عند القياس، راجع عرض الممر بعد فتح الأدراج وباب غسالة الأطباق.",
+  },
+  "galley-sage": {
+    layout: "مطبخ متوازٍ",
+    title: "مطبخ متوازٍ بواجهات مريمية",
+    description: "يمكن تخصيص جانب للغسيل والتحضير والآخر للطهي. تأكد من بقاء الممر مريحًا لمن يستخدم الجانبين.",
+  },
+  "galley-warmwood": {
+    layout: "مطبخ متوازٍ",
+    title: "مطبخ متوازٍ بخشب دافئ",
+    description: "راجِع فتح الأجهزة في الجهتين، خصوصًا إذا كانت الأبواب المتقابلة تُفتح في الوقت نفسه.",
+  },
+  "walnut": {
+    layout: "مطبخ على ثلاثة جدران",
+    title: "واجهات بلون الجوز",
+    description: "يجمع التوزيع الحوض والموقد وسطح التحضير حول مساحة عمل واحدة. اختر تجهيز الزوايا بحسب ما تخزّنه فيها.",
+  },
+  "u-sand": {
+    layout: "مطبخ على ثلاثة جدران",
+    title: "خزائن رملية على ثلاثة جدران",
+    description: "تساعد المساحة المتصلة على توزيع التحضير والغسيل. راجع مواضع المقابض والأدراج قرب الركنين.",
+  },
+  "u-forest": {
+    layout: "مطبخ على ثلاثة جدران",
+    title: "أخضر داكن مع سطح حجري",
+    description: "يمكن أن تستفيد الوحدات من الركنين معًا. حدد مواقع أدوات الطبخ اليومية قبل اختيار آليات السحب.",
   },
 };
 
@@ -65,6 +170,7 @@ for (const button of document.querySelectorAll('[data-design]')) {
     image.src = source.src;
     image.alt = source.alt;
     document.querySelector('#design-title').textContent = design.title;
+    document.querySelector('#design-layout').textContent = design.layout;
     document.querySelector('#design-description').textContent = design.description;
     document.querySelector('#pick-design').href = 'request.html?design=' + encodeURIComponent(key);
     designDialog.showModal();
