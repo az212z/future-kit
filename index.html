@@ -10,14 +10,15 @@
   <meta property="og:description" content="تصميم وتفصيل المطابخ في الرياض، من رفع المقاسات واختيار الخامات إلى التصنيع والتركيب.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://az212z.github.io/future-kit/">
-  <meta property="og:image" content="https://az212z.github.io/future-kit/assets/showroom.webp">
+  <meta property="og:image" content="https://az212z.github.io/future-kit/assets/atelier-hero.webp">
   <link rel="canonical" href="https://az212z.github.io/future-kit/">
   <link rel="icon" href="assets/mark.png" type="image/png">
   <link rel="preload" href="assets/plex-arabic-600.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="fonts.css">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="premium.css">
   <script src="config.js" defer></script>
-  <script src="app.js" defer></script>
+  <script type="module" src="app.js"></script>
 </head>
 <body>
   <a class="skip" href="#main">انتقل إلى المحتوى</a>
@@ -38,6 +39,7 @@
         <a href="designs.html">التصاميم</a>
         <a href="services.html">الخدمات</a>
         <a href="materials.html">الخامات</a>
+        <a href="studio.html">استوديو التشطيبات</a>
         <a href="planning.html">دليل التخطيط</a>
         <a href="request.html" class="mobile-quote">طلب عرض سعر</a>
       </nav>
@@ -45,14 +47,14 @@
     </div>
   </header>
   <main id="main">
-    <section class="hero" aria-labelledby="headline">
+    <section class="hero atelier-hero" aria-labelledby="headline">
       <div class="hero-intro">
         <div class="hero-title">
-          <p class="eyebrow"><span></span> مطابخ في الرياض</p>
-          <h1 id="headline">تصميم وتفصيل المطابخ</h1>
+          <p class="eyebrow"><span></span> تصميم وتفصيل المطابخ في الرياض</p>
+          <h1 id="headline">على مقاس<br> يومك.</h1>
         </div>
         <div class="hero-info">
-          <p>نصمّم مطبخك بدقّة، ونختار خاماته بعناية، وننفّذ تفاصيله بإتقان.</p>
+          <p>نصمّم مطبخك بدقّة، ونختار خاماته بعناية. من تخطيط المساحة إلى التفصيل والتركيب في الرياض.</p>
           <div class="hero-links">
             <a class="button button-light" href="request.html">طلب عرض سعر <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></a>
             <a class="line-link" href="designs.html">استعرض التصاميم <svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></a>
@@ -61,8 +63,8 @@
       </div>
       <figure class="hero-image">
         <picture>
-          <source media="(max-width: 640px)" srcset="assets/showroom-mobile.webp">
-          <img src="assets/showroom.webp" alt="مطبخ بتشطيب خشبي وجزيرة من الترافرتين" width="1860" height="846" fetchpriority="high">
+          <source media="(max-width: 640px)" srcset="assets/atelier-hero-mobile.webp">
+          <img src="assets/atelier-hero.webp" alt="تصوّر لمطبخ بخزائن خضراء وخشبية وجزيرة من الحجر الطبيعي" width="1680" height="730" fetchpriority="high">
         </picture>
         <figcaption class="signed-caption">
           <span class="brand-stamp" aria-hidden="true"></span>
@@ -71,18 +73,40 @@
       </figure>
     </section>
 
-    <section class="wrap section home-catalog" aria-labelledby="catalog-title">
-      <div class="catalog-heading"><h2 id="catalog-title">تصاميم مدروسة وخامات منتقاة</h2><p>قارن التوزيعات، واختر الواجهات والأسطح التي تناسب استخدامك اليومي.</p></div>
-      <article id="kitchens" class="editorial-card">
-        <a href="designs.html"><img src="assets/collection-ivory.webp" alt="" width="718" height="724" loading="lazy">
-          <div class="editorial-copy"><div><h3>التصاميم</h3><p>١٧ تصورًا تجمع خمسة توزيعات، من المطبخ المستقيم إلى المطبخ المفتوح بجزيرة.</p></div><svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></div>
-        </a>
-      </article>
-      <article id="finishes" class="editorial-card">
-        <a href="materials.html"><img src="assets/finish-fronts.webp" alt="" width="720" height="720" loading="lazy">
-          <div class="editorial-copy"><div><h3>الخامات</h3><p>واجهات الخزائن، وأسطح العمل، وتجهيزات التخزين.</p></div><svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></div>
-        </a>
-      </article>
+    <section id="kitchens" class="wrap section show-collections" aria-labelledby="catalog-title">
+      <div class="show-heading">
+        <div><p class="eyebrow"><span></span> معرض التصاميم</p><h2 id="catalog-title">كل مساحة لها توزيع.</h2></div>
+        <div><p>تصاميم مدروسة وخامات منتقاة. استكشف ١٧ تصورًا في خمسة توزيعات تناسب أشكال المساحات المختلفة.</p><a href="designs.html" class="line-link">تصفّح التصاميم كلها <svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></a></div>
+      </div>
+      <div class="collection-spread">
+        <a class="collection-lead" href="designs.html?layout=island"><img src="assets/collection-island-walnut.webp" width="800" height="800" alt="" loading="lazy"><span>المطبخ بجزيرة <svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></span></a>
+        <a href="designs.html?layout=corner"><img src="assets/collection-corner-oak.webp" width="800" height="800" alt="" loading="lazy"><span>مطبخ زاوية <svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></span></a>
+        <a href="designs.html?layout=linear"><img src="assets/collection-linear-shaker.webp" width="800" height="800" alt="" loading="lazy"><span>مطبخ مستقيم <svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></span></a>
+        <a href="designs.html?layout=galley"><img src="assets/collection-galley-sage.webp" width="800" height="800" alt="" loading="lazy"><span>مطبخ متوازٍ <svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></span></a>
+        <a href="designs.html?layout=u-shape"><img src="assets/collection-u-sand.webp" width="800" height="800" alt="" loading="lazy"><span>مطبخ على ثلاثة جدران <svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></span></a>
+      </div>
+      <p class="studio-caption">الصور تصوّرات تصميمية.</p>
+    </section>
+
+    <section id="finishes" class="home-studio" aria-labelledby="home-studio-title">
+      <div class="wrap home-studio-grid">
+        <figure><img src="assets/finish-board-forest.webp" width="760" height="500" alt="تصوّر لواجهات خضراء مع سطح عاجي" loading="lazy"><figcaption>لوحة أخضر عميق وأبيض حجري</figcaption></figure>
+        <div>
+          <p class="eyebrow"><span></span> التشطيبات</p>
+          <h2 id="home-studio-title">نفس الفكرة.<br>أربع شخصيات.</h2>
+          <p>شاهد كيف يتغيّر حضور المطبخ بتبديل الواجهة والسطح. قارن لوحتين جنبًا إلى جنب وأضف اختيارك للطلب.</p>
+          <div class="cta-links"><a class="button button-light" href="studio.html">جرّب استوديو التشطيبات <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></a><a class="line-link" href="materials.html">دليل الخامات</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap section home-services" aria-labelledby="home-services-title">
+      <h2 id="home-services-title">كيف نقدر نخدمك؟</h2>
+      <div class="home-service-grid">
+        <article><h3>تصميم وتفصيل مطبخ جديد</h3><p>تخطيط حركة التحضير والتخزين والأجهزة على مقاس المكان.</p><a class="line-link" href="request.html?project=new">ابدأ مشروع مطبخ جديد</a></article>
+        <article><h3>تجديد مطبخ قائم</h3><p>مراجعة حالة الوحدات وتحديد نطاق تجديد الواجهات والأسطح والتخزين.</p><a class="line-link" href="request.html?project=renew">ناقش تجديد مطبخك</a></article>
+        <article><h3>القياس والتصنيع والتركيب</h3><p>مراجعة المقاسات والتوصيلات، اعتماد الخامات، ثم تركيب الخزائن والأسطح.</p><a class="line-link" href="services.html">تصفّح الخدمات</a></article>
+      </div>
     </section>
 
     <section class="planning-feature" aria-labelledby="home-planning">
@@ -114,7 +138,7 @@
 
     <section id="quote" class="quiet-cta wrap home-quote">
       <div><h2>طلب عرض سعر</h2><p>أضف الحي، ونوع المشروع، والمقاسات المتوفرة. ويمكنك إرفاق أحد تصاميم المعرض.</p></div>
-      <div class="cta-links"><a class="button button-dark" href="request.html">تجهيز الطلب <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></a><a id="faq" class="line-link" href="request.html#faq">الأسئلة الشائعة <svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></a></div>
+      <div class="cta-links"><a class="button button-dark" href="request.html">تجهيز الطلب <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></a><a id="faq" class="line-link" href="request.html#faq">الأسئلة الشائعة <svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></a><a class="line-link" href="journal.html">دليل تجهيز المطبخ</a></div>
     </section>
   </main>
   <footer>
@@ -126,8 +150,10 @@
       <nav class="footer-nav" aria-label="روابط التذييل">
         <a href="designs.html">التصاميم</a>
         <a href="materials.html">الخامات</a>
+        <a href="studio.html">استوديو التشطيبات</a>
         <a href="services.html">الخدمات</a>
         <a href="planning.html">دليل التخطيط</a>
+        <a href="journal.html">دليل تجهيز المطبخ</a>
         <a href="request.html#faq">الأسئلة الشائعة</a>
         <button type="button" class="footer-link" id="open-privacy" aria-haspopup="dialog">خصوصية الطلب</button>
       </nav>

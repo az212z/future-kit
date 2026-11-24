@@ -1,4 +1,4 @@
-'use strict';
+import { finishes } from './finishes.js';
 
 const menuToggle = document.querySelector('.menu-toggle');
 const navigation = document.querySelector('#navigation');
@@ -172,6 +172,7 @@ for (const button of document.querySelectorAll('[data-design]')) {
     document.querySelector('#design-title').textContent = design.title;
     document.querySelector('#design-layout').textContent = design.layout;
     document.querySelector('#design-description').textContent = design.description;
+    document.querySelector('#design-sheet').href = 'design-' + key + '.html';
     document.querySelector('#pick-design').href = 'request.html?design=' + encodeURIComponent(key);
     designDialog.showModal();
   });
@@ -227,7 +228,7 @@ if (planner) {
 }
 
 function initializeQuote(form) {
-  const config = window.futureKitConfig;
+  const config = window.futureKitConfig ?? {};
   const whatsapp = /^9665\d{8}$/.test(config.whatsapp) ? 'https://wa.me/' + config.whatsapp : '';
   const storeWhatsapp = document.querySelector('#store-whatsapp');
   const storeMap = document.querySelector('#store-map');
@@ -245,6 +246,20 @@ function initializeQuote(form) {
   const pageUrl = new URL(location.href);
   const key = pageUrl.searchParams.get('design');
   const project = pageUrl.searchParams.get('project');
+  const finishKey = pageUrl.searchParams.get('finish');
+  const finishSelection = document.querySelector('#finish-selection');
+  let selectedFinish = Object.hasOwn(finishes, finishKey) ? finishes[finishKey].title : '';
+  if (selectedFinish) {
+    document.querySelector('#selected-finish').textContent = 'لوحة التشطيب: ' + selectedFinish;
+    finishSelection.hidden = false;
+  }
+  document.querySelector('#clear-finish').addEventListener('click', () => {
+    selectedFinish = '';
+    finishSelection.hidden = true;
+    pageUrl.searchParams.delete('finish');
+    history.replaceState(null, '', pageUrl.href);
+    form.elements.notes.focus();
+  });
   const priority = pageUrl.searchParams.get('priority');
   if (Object.hasOwn(projectOptions, project)) form.elements.project.value = projectOptions[project];
   if (Object.hasOwn(priorityOptions, priority)) form.elements.priority.value = priority;
@@ -296,6 +311,7 @@ function initializeQuote(form) {
       'نوع المشروع: ' + fields.project.value,
     ];
     if (selectedDesign) message.push('التصميم: ' + selectedDesign);
+    if (selectedFinish) message.push('لوحة التشطيب: ' + selectedFinish);
     if (fields.stage.value) message.push('مرحلة المشروع: ' + fields.stage.value);
     if (Object.hasOwn(priorityOptions, fields.priority.value)) {
       message.push('أولوية الاستخدام: ' + priorityOptions[fields.priority.value].label);

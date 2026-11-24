@@ -16,8 +16,9 @@
   <link rel="preload" href="assets/plex-arabic-600.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="fonts.css">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="premium.css">
   <script src="config.js" defer></script>
-  <script src="app.js" defer></script>
+  <script type="module" src="app.js"></script>
 </head>
 <body>
   <a class="skip" href="#main">انتقل إلى المحتوى</a>
@@ -38,6 +39,7 @@
         <a href="designs.html" aria-current="page">التصاميم</a>
         <a href="services.html">الخدمات</a>
         <a href="materials.html">الخامات</a>
+        <a href="studio.html">استوديو التشطيبات</a>
         <a href="planning.html">دليل التخطيط</a>
         <a href="request.html" class="mobile-quote">طلب عرض سعر</a>
       </nav>
@@ -92,7 +94,7 @@
             <div class="design-body">
               <h3>جزيرة من الترافرتين</h3>
               <p>ترافرتين فاتح مع واجهات خضراء وألواح من الجوز.</p>
-              <button type="button" class="line-link design-button" data-design="island" aria-haspopup="dialog">عرض التفاصيل <svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></button>
+              <div class="design-links"><button type="button" class="line-link design-button" data-design="island" aria-haspopup="dialog">عرض التفاصيل <svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></button> <a class="line-link design-page-link" href="design-island.html">صفحة التصميم</a></div>
             </div>
           </article>
           <article class="design" data-category="island" data-palette="light">
@@ -100,7 +102,7 @@
             <div class="design-body">
               <h3>جزيرة عاجية بسطح ممتد</h3>
               <p>خزائن عاجية وجزيرة بيضاء بإضاءة طبيعية.</p>
-              <button type="button" class="line-link design-button" data-design="island-ivory" aria-haspopup="dialog">عرض التفاصيل <svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></button>
+              <div class="design-links"><button type="button" class="line-link design-button" data-design="island-ivory" aria-haspopup="dialog">عرض التفاصيل <svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></button> <a class="line-link design-page-link" href="design-island-ivory.html">صفحة التصميم</a></div>
             </div>
           </article>
           <article class="design" data-category="island" data-palette="dark">
@@ -108,7 +110,7 @@
             <div class="design-body">
               <h3>جزيرة حجرية وواجهات فحمية</h3>
               <p>حجر فاتح يقابل جدار خزائن بلون الفحم وخشب داكن.</p>
-              <button type="button" class="line-link design-button" data-design="island-graphite" aria-haspopup="dialog">عرض التفاصيل <svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></button>
+              <div class="design-links"><button type="button" class="line-link design-button" data-design="island-graphite" aria-haspopup="dialog">عرض التفاصيل <svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></button> <a class="line-link design-page-link" href="design-island-graphite.html">صفحة التصميم</a></div>
             </div>
           </article>
           <article class="design" data-category="island" data-palette="earth">
@@ -116,7 +118,7 @@
             <div class="design-body">
               <h3>جزيرة عريضة مع خزائن الجوز</h3>
               <p>سطح فاتح بعروق واضحة مع خزائن خشبية طويلة.</p>
-              <button type="button" class="line-link design-button" data-design="island-walnut" aria-haspopup="dialog">عرض التفاصيل <svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></button>
+              <div class="design-links"><button type="button" class="line-link design-button" data-design="island-walnut" aria-haspopup="dialog">عرض التفاصيل <svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></button> <a class="line-link design-page-link" href="design-island-walnut.html">صفحة التصميم</a></div>
             </div>
           </article>
         </div>
@@ -129,7 +131,7 @@
             <div class="design-body">
               <h3>واجهات رملية مطفية</h3>
               <p>خزائن رملية مع تفاصيل خشبية عند زاوية المطبخ.</p>
-              <button type="button" class="line-link design-button" data-design="ivory" aria-haspopup="dialog">عرض التفاصيل <svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></button>
+              <div class="design-links"><button type="button" class="line-link design-button" data-design="ivory" aria-haspopup="dialog">عرض التفاصيل <svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></button> <a class="line-link design-page-link" href="design-ivory.html">صفحة التصميم</a></div>
             </div>
           </article>
           <article class="design" data-category="corner" data-palette="light">
@@ -137,7 +139,7 @@
             <div class="design-body">
               <h3>زاوية من البلوط الفاتح</h3>
               <p>خشب فاتح وسطح حجري يكملان امتداد الخزائن.</p>
-              <button type="button" class="line-link design-button" data-design="corner-oak" aria-haspopup="dialog">عرض التفاصيل <svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></button>
+              <div class="design-links"><button type="button" class="line-link design-button" data-design="corner-oak" aria-haspopup="dialog">عرض التفاصيل <svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></button> <a class="line-link design-page-link" href="design-corner-oak.html">صفحة التصميم</a></div>
             </div>
           </article>
           <article class="design" data-category="corner" data-palette="dark">
@@ -145,7 +147,7 @@
             <div class="design-body">
               <h3>زاوية بواجهات جوز داكنة</h3>
               <p>واجهات جوز داكنة وسطح بلون رمادي دافئ.</p>
-              <button type="button" class="line-link design-button" data-design="corner-espresso" aria-haspopup="dialog">عرض التفاصيل <svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></button>
+              <div class="design-links"><button type="button" class="line-link design-button" data-design="corner-espresso" aria-haspopup="dialog">عرض التفاصيل <svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></button> <a class="line-link design-page-link" href="design-corner-espresso.html">صفحة التصميم</a></div>
             </div>
           </article>
           <article class="design" data-category="corner" data-palette="earth">
@@ -153,7 +155,7 @@
             <div class="design-body">
               <h3>زاوية بخزائن رمادية دافئة</h3>
               <p>واجهات هادئة مع لمسات من الخشب عند الزاوية.</p>
-              <button type="button" class="line-link design-button" data-design="corner-taupe" aria-haspopup="dialog">عرض التفاصيل <svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></button>
+              <div class="design-links"><button type="button" class="line-link design-button" data-design="corner-taupe" aria-haspopup="dialog">عرض التفاصيل <svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></button> <a class="line-link design-page-link" href="design-corner-taupe.html">صفحة التصميم</a></div>
             </div>
           </article>
         </div>
@@ -166,7 +168,7 @@
             <div class="design-body">
               <h3>بلوط فاتح على جدار واحد</h3>
               <p>سطح عمل طولي وخزائن مدمجة بواجهات خشبية فاتحة.</p>
-              <button type="button" class="line-link design-button" data-design="linear" aria-haspopup="dialog">عرض التفاصيل <svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></button>
+              <div class="design-links"><button type="button" class="line-link design-button" data-design="linear" aria-haspopup="dialog">عرض التفاصيل <svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></button> <a class="line-link design-page-link" href="design-linear.html">صفحة التصميم</a></div>
             </div>
           </article>
           <article class="design" data-category="linear" data-palette="light">
@@ -174,7 +176,7 @@
             <div class="design-body">
               <h3>مطبخ مستقيم بواجهات مؤطّرة</h3>
               <p>خزائن عاجية مؤطّرة مرتّبة على امتداد جدار واحد.</p>
-              <button type="button" class="line-link design-button" data-design="linear-shaker" aria-haspopup="dialog">عرض التفاصيل <svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></button>
+              <div class="design-links"><button type="button" class="line-link design-button" data-design="linear-shaker" aria-haspopup="dialog">عرض التفاصيل <svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></button> <a class="line-link design-page-link" href="design-linear-shaker.html">صفحة التصميم</a></div>
             </div>
           </article>
           <article class="design" data-category="linear" data-palette="earth">
@@ -182,7 +184,7 @@
             <div class="design-body">
               <h3>خشب فاتح وأجهزة مدمجة</h3>
               <p>خزائن بلون خشبي دافئ تمتد على جدار واحد.</p>
-              <button type="button" class="line-link design-button" data-design="linear-ash" aria-haspopup="dialog">عرض التفاصيل <svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></button>
+              <div class="design-links"><button type="button" class="line-link design-button" data-design="linear-ash" aria-haspopup="dialog">عرض التفاصيل <svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></button> <a class="line-link design-page-link" href="design-linear-ash.html">صفحة التصميم</a></div>
             </div>
           </article>
         </div>
@@ -195,7 +197,7 @@
             <div class="design-body">
               <h3>خشب داكن على جدارين متقابلين</h3>
               <p>وحدات متقابلة مع أسطح فاتحة وممر يطل على نافذة.</p>
-              <button type="button" class="line-link design-button" data-design="galley" aria-haspopup="dialog">عرض التفاصيل <svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></button>
+              <div class="design-links"><button type="button" class="line-link design-button" data-design="galley" aria-haspopup="dialog">عرض التفاصيل <svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></button> <a class="line-link design-page-link" href="design-galley.html">صفحة التصميم</a></div>
             </div>
           </article>
           <article class="design" data-category="galley" data-palette="earth">
@@ -203,7 +205,7 @@
             <div class="design-body">
               <h3>مطبخ متوازٍ بواجهات مريمية</h3>
               <p>أخضر مريمي مقابل سطح فاتح على امتداد الممر.</p>
-              <button type="button" class="line-link design-button" data-design="galley-sage" aria-haspopup="dialog">عرض التفاصيل <svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></button>
+              <div class="design-links"><button type="button" class="line-link design-button" data-design="galley-sage" aria-haspopup="dialog">عرض التفاصيل <svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></button> <a class="line-link design-page-link" href="design-galley-sage.html">صفحة التصميم</a></div>
             </div>
           </article>
           <article class="design" data-category="galley" data-palette="dark">
@@ -211,7 +213,7 @@
             <div class="design-body">
               <h3>مطبخ متوازٍ بخشب دافئ</h3>
               <p>وحدات خشبية على جانبي الممر، مع إضاءة عند نهايته.</p>
-              <button type="button" class="line-link design-button" data-design="galley-warmwood" aria-haspopup="dialog">عرض التفاصيل <svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></button>
+              <div class="design-links"><button type="button" class="line-link design-button" data-design="galley-warmwood" aria-haspopup="dialog">عرض التفاصيل <svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></button> <a class="line-link design-page-link" href="design-galley-warmwood.html">صفحة التصميم</a></div>
             </div>
           </article>
         </div>
@@ -224,7 +226,7 @@
             <div class="design-body">
               <h3>واجهات بلون الجوز</h3>
               <p>خزائن من ثلاث جهات، مع سطح فاتح وبلاط خلفي هادئ.</p>
-              <button type="button" class="line-link design-button" data-design="walnut" aria-haspopup="dialog">عرض التفاصيل <svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></button>
+              <div class="design-links"><button type="button" class="line-link design-button" data-design="walnut" aria-haspopup="dialog">عرض التفاصيل <svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></button> <a class="line-link design-page-link" href="design-walnut.html">صفحة التصميم</a></div>
             </div>
           </article>
           <article class="design" data-category="u-shape" data-palette="light">
@@ -232,7 +234,7 @@
             <div class="design-body">
               <h3>خزائن رملية على ثلاثة جدران</h3>
               <p>واجهات رملية وسطح فاتح يمتد حول منطقة العمل.</p>
-              <button type="button" class="line-link design-button" data-design="u-sand" aria-haspopup="dialog">عرض التفاصيل <svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></button>
+              <div class="design-links"><button type="button" class="line-link design-button" data-design="u-sand" aria-haspopup="dialog">عرض التفاصيل <svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></button> <a class="line-link design-page-link" href="design-u-sand.html">صفحة التصميم</a></div>
             </div>
           </article>
           <article class="design" data-category="u-shape" data-palette="earth">
@@ -240,7 +242,7 @@
             <div class="design-body">
               <h3>أخضر داكن مع سطح حجري</h3>
               <p>واجهات خضراء داكنة يوازنها حجر فاتح على ثلاثة جوانب.</p>
-              <button type="button" class="line-link design-button" data-design="u-forest" aria-haspopup="dialog">عرض التفاصيل <svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></button>
+              <div class="design-links"><button type="button" class="line-link design-button" data-design="u-forest" aria-haspopup="dialog">عرض التفاصيل <svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></button> <a class="line-link design-page-link" href="design-u-forest.html">صفحة التصميم</a></div>
             </div>
           </article>
         </div>
@@ -257,8 +259,10 @@
       <nav class="footer-nav" aria-label="روابط التذييل">
         <a href="designs.html">التصاميم</a>
         <a href="materials.html">الخامات</a>
+        <a href="studio.html">استوديو التشطيبات</a>
         <a href="services.html">الخدمات</a>
         <a href="planning.html">دليل التخطيط</a>
+        <a href="journal.html">دليل تجهيز المطبخ</a>
         <a href="request.html#faq">الأسئلة الشائعة</a>
         <button type="button" class="footer-link" id="open-privacy" aria-haspopup="dialog">خصوصية الطلب</button>
       </nav>
@@ -271,6 +275,7 @@
       <div class="dialog-copy">
         <p class="eyebrow" id="design-layout"></p>
         <h2 id="design-title">تفاصيل التصميم</h2><p id="design-description"></p>
+        <a href="design-island.html" id="design-sheet" class="line-link">صفحة التصميم الكاملة <svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></a>
         <a href="request.html" id="pick-design" class="button button-dark">إضافة التصميم إلى الطلب <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></a>
       </div>
     </div>

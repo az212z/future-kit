@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="ar-SA" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#144131">
+  <title>استوديو تشطيبات المطابخ | فيوتشر كيت</title>
+  <meta name="description" content="قارن أربع لوحات تشطيب للمطابخ من فيوتشر كيت وأرفق خيارك بطلب عرض السعر.">
+  <meta property="og:title" content="استوديو تشطيبات المطابخ | فيوتشر كيت">
+  <meta property="og:description" content="قارن أربع لوحات تشطيب للمطابخ من فيوتشر كيت وأرفق خيارك بطلب عرض السعر.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://az212z.github.io/future-kit/studio.html">
+  <meta property="og:image" content="https://az212z.github.io/future-kit/assets/finish-board-forest.webp">
+  <link rel="canonical" href="https://az212z.github.io/future-kit/studio.html">
+  <link rel="icon" href="assets/mark.png" type="image/png">
+  <link rel="preload" href="assets/plex-arabic-600.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="fonts.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="premium.css">
+  <script src="config.js" defer></script>
+  <script type="module" src="app.js"></script>
+  <script type="module" src="studio.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">انتقل إلى المحتوى</a>
+  <svg class="symbols" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="arrow" viewBox="0 0 24 24"><path d="M20 12H4m0 0 6-6m-6 6 6 6"/></symbol>
+    <symbol id="diagonal" viewBox="0 0 24 24"><path d="M18 18 6 6m0 10V6h10"/></symbol>
+    <symbol id="pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 11-8 11S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+    <symbol id="menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="x" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
+    <symbol id="plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  </svg>
+  <header class="header" id="top">
+    <div class="header-inner wrap">
+      <a class="brand" href="./" aria-label="فيوتشر كيت، الرئيسية"><img src="assets/logo-light.png" width="960" height="315" alt="فيوتشر كيت"></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation" aria-label="القائمة"><svg class="icon" aria-hidden="true"><use href="#menu"/></svg></button>
+      <nav id="navigation" aria-label="القائمة الرئيسية">
+        <a href="./">الرئيسية</a>
+        <a href="designs.html">التصاميم</a>
+        <a href="services.html">الخدمات</a>
+        <a href="materials.html">الخامات</a>
+        <a href="studio.html" aria-current="page">استوديو التشطيبات</a>
+        <a href="planning.html">دليل التخطيط</a>
+        <a href="request.html" class="mobile-quote">طلب عرض سعر</a>
+      </nav>
+      <a class="button button-outline head-quote" href="request.html">طلب عرض سعر <svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></a>
+    </div>
+  </header>
+  <main id="main">
+
+    <section class="wrap studio-intro" aria-labelledby="studio-title">
+      <p class="eyebrow"><span></span> استوديو التشطيبات</p>
+      <h1 id="studio-title">جرّب الخامة قبل الاختيار.</h1>
+      <p>شاهد أربع لوحات لنفس فكرة المطبخ، وقارن بين الواجهات والأسطح قبل إضافتها لطلبك.</p>
+    </section>
+    <section class="wrap studio-workbench" id="finish-studio" aria-label="مقارنة تشطيبات المطابخ">
+      <div class="studio-settings">
+        <fieldset>
+          <legend>اختر اللوحة الأساسية</legend>
+          <div class="swatches">
+            <label class="swatch swatch-ivory"><input type="radio" name="finish" value="ivory" checked disabled><span class="swatch-color"></span><span>عاجي ورملي</span></label>
+            <label class="swatch swatch-walnut"><input type="radio" name="finish" value="walnut" disabled><span class="swatch-color"></span><span>جوز وحجر دافئ</span></label>
+            <label class="swatch swatch-forest"><input type="radio" name="finish" value="forest" disabled><span class="swatch-color"></span><span>أخضر عميق</span></label>
+            <label class="swatch swatch-graphite"><input type="radio" name="finish" value="graphite" disabled><span class="swatch-color"></span><span>فحمي ومعرّق</span></label>
+          </div>
+        </fieldset>
+        <label class="studio-compare">قارن مع لوحة ثانية
+          <select id="compare-finish" disabled>
+            <option value="">دون مقارنة</option>
+            <option value="ivory">عاجي وحجر رملي</option>
+            <option value="walnut">جوز داكن وحجر دافئ</option>
+            <option value="forest">أخضر عميق وأبيض حجري</option>
+            <option value="graphite">فحمي وحجر معرّق</option>
+          </select>
+        </label>
+        <div class="studio-actions">
+          <a id="studio-quote" class="button button-dark" href="request.html?finish=ivory">إضافة الاختيار للطلب <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></a>
+          <button type="button" id="share-board" class="line-link" disabled>نسخ رابط اللوحة</button>
+        </div>
+        <input type="url" id="shared-url" aria-label="رابط لوحة التشطيب" readonly hidden>
+        <p id="studio-status" class="studio-status" role="status"></p>
+        <noscript><p>فعّل JavaScript لتبديل اللوحات والمقارنة بينها.</p></noscript>
+      </div>
+      <div class="studio-display">
+        <article class="finish-board" id="selected-board">
+          <img src="assets/finish-board-ivory.webp" width="760" height="500" alt="تصوّر مطبخ عاجي بسطح رملي" fetchpriority="high">
+          <div class="finish-info">
+            <h2 data-title>عاجي وحجر رملي</h2>
+            <dl><div><dt>الواجهات</dt><dd data-front>واجهات عاجية مطفية</dd></div><div><dt>سطح العمل</dt><dd data-surface>سطح بدرجة الرمل</dd></div></dl>
+            <p data-detail>درجات فاتحة تنسجم مع الإضاءة الطبيعية. قارن بين العاجي والبيج بجوار لون الأرضية قبل اختيار العينة.</p>
+          </div>
+        </article>
+        <article class="finish-board" id="reference-board" hidden>
+          <img src="assets/finish-board-walnut.webp" width="760" height="500" alt="" loading="lazy">
+          <div class="finish-info">
+            <h2 data-title></h2>
+            <dl><div><dt>الواجهات</dt><dd data-front></dd></div><div><dt>سطح العمل</dt><dd data-surface></dd></div></dl>
+            <p data-detail></p>
+          </div>
+        </article>
+      </div>
+      <p class="studio-caption">الصور تصوّرات رقمية. يُعتمد اللون والخامة بعد مراجعة العينة الفعلية.</p>
+    </section>
+    <section class="wrap quiet-cta studio-footer">
+      <div><h2>تحتاج تحسم التوزيع أولًا؟</h2><p>ابدأ من عدد الجدران المتاحة ومواقع الأجهزة قبل اعتماد التشطيب.</p></div>
+      <a class="line-link" href="planning.html">افتح دليل التخطيط <svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></a>
+    </section>
+  </main>
+  <footer>
+    <div class="wrap footer-inner">
+      <div class="footer-brand">
+        <a class="brand" href="./" aria-label="فيوتشر كيت، الرئيسية"><img src="assets/logo-light.png" alt="فيوتشر كيت" width="960" height="315"></a>
+        <p>تصميم وتفصيل المطابخ في الرياض</p>
+      </div>
+      <nav class="footer-nav" aria-label="روابط التذييل">
+        <a href="designs.html">التصاميم</a>
+        <a href="materials.html">الخامات</a>
+        <a href="studio.html">استوديو التشطيبات</a>
+        <a href="services.html">الخدمات</a>
+        <a href="planning.html">دليل التخطيط</a>
+        <a href="journal.html">دليل تجهيز المطبخ</a>
+        <a href="request.html#faq">الأسئلة الشائعة</a>
+        <button type="button" class="footer-link" id="open-privacy" aria-haspopup="dialog">خصوصية الطلب</button>
+      </nav>
+    </div>
+  </footer>
+  <dialog id="privacy-dialog" aria-labelledby="privacy-title">
+    <div class="dialog-copy">
+      <button type="button" class="close" data-close aria-label="إغلاق"><svg class="icon"><use href="#x"/></svg></button>
+      <h2 id="privacy-title">خصوصية الطلب</h2>
+      <p>يعالج الموقع بيانات النموذج داخل متصفحك لتجهيز الطلب. يمكنك نسخ الطلب أو تنزيله، وإذا اخترت فتح واتساب تنتقل التفاصيل إليه لمراجعتها وإرسالها.</p>
+    </div>
+  </dialog>
+</body>
+</html>
