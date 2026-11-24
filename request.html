@@ -39,7 +39,7 @@
         <a href="designs.html">التصاميم</a>
         <a href="services.html">الخدمات</a>
         <a href="materials.html">الخامات</a>
-        <a href="studio.html">استوديو التشطيبات</a>
+        <a href="studio.html">استوديو الخامات</a>
         <a href="planning.html">دليل التخطيط</a>
         <a href="request.html" aria-current="page" class="mobile-quote">طلب عرض سعر</a>
       </nav>
@@ -51,13 +51,13 @@
       <div class="page-intro">
         <div class="intro-copy">
         <h1>طلب عرض سعر</h1>
-        <p>أدخل بيانات المشروع، وأضف المقاسات التقريبية إن توفرت. يمكنك مراجعة الطلب قبل مشاركته.</p>
+        <p>ابدأ باسم الحي ونوع المشروع. إذا عندك مقاسات تقريبية، أضفها في خانة الملاحظات.</p>
         </div>
       </div>
       <div class="quote-grid">
         <form id="quote-form" class="quote-form" aria-labelledby="quote-form-title">
-          <h2 id="quote-form-title">بيانات المشروع</h2>
-          <noscript><p>يرجى تفعيل JavaScript لاستخدام نموذج الطلب.</p></noscript>
+          <h2 id="quote-form-title">تفاصيل المطبخ</h2>
+          <noscript><p>فعّل JavaScript في متصفحك حتى تقدر تعبّي الطلب.</p></noscript>
           <div class="fields">
             <label>الاسم <input name="name" required autocomplete="name" maxlength="70"></label>
             <label>رقم الجوال <input name="phone" type="tel" required autocomplete="tel" inputmode="tel" dir="ltr" placeholder="05XXXXXXXX" maxlength="24"></label>
@@ -70,15 +70,15 @@
           </div>
           <label>المقاسات وملاحظات المشروع <small>(اختياري)</small><textarea name="notes" rows="4" maxlength="400" placeholder="المقاسات التقريبية، التوزيع المفضل، أو نوع الخامة"></textarea></label>
           <div class="selection" id="selection" hidden><span id="selected-design"></span><button type="button" id="clear-design">إزالة التصميم</button></div>
-          <div class="selection" id="finish-selection" hidden><span id="selected-finish"></span><button type="button" id="clear-finish">إزالة التشطيب</button></div>
+          <div class="selection" id="finish-selection" hidden><span id="selected-finish"></span><button type="button" id="clear-finish">إزالة اختيار الخامات</button></div>
           <div class="form-end"><button class="button button-dark" type="submit" disabled>مراجعة الطلب <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></button></div>
         </form>
         <aside class="quote-aside">
-          <h2>ما يفيدنا في عرض السعر</h2>
+          <h2>وش يساعدنا في تحديد السعر؟</h2>
           <ul>
-            <li>أبعاد المطبخ التقريبية وموقع الأجهزة، إن توفرت.</li>
-            <li>التصميم المفضّل من <a href="designs.html">صفحة التصاميم</a>.</li>
-            <li id="quote-method">يمكن نسخ الطلب أو حفظه بعد المراجعة.</li>
+            <li>مقاسات المطبخ التقريبية ومكان الأجهزة.</li>
+            <li>أي تصميم أعجبك في <a href="designs.html">صفحة التصاميم</a>.</li>
+            <li id="quote-method">بعد المراجعة تقدر تنسخ الطلب أو تحمّله.</li>
           </ul>
           <a id="store-whatsapp" class="line-link" target="_blank" rel="noopener noreferrer" hidden>واتساب فيوتشر كيت <svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></a>
           <a id="store-map" class="line-link" target="_blank" rel="noopener noreferrer" hidden>موقع المعرض <svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></a>
@@ -89,12 +89,12 @@
       <div class="wrap faq-grid section">
         <h2>الأسئلة الشائعة</h2>
         <div class="faq-list">
-          <details><summary>على أي أساس يُحسب السعر؟ <svg class="icon" aria-hidden="true"><use href="#plus"/></svg></summary><p>يُحسب السعر وفق المقاسات ونوع الخامات وعدد وحدات التخزين ومواصفات سطح العمل والتجهيزات الداخلية.</p></details>
-          <details><summary>هل يلزم توفر المقاسات عند تقديم الطلب؟ <svg class="icon" aria-hidden="true"><use href="#plus"/></svg></summary><p>يمكن تجهيز الطلب باسم الحي ووصف المشروع. تُعتمد مقاسات التصنيع بعد قياس الموقع.</p></details>
-          <details><summary>متى تتحدد مدة التنفيذ؟ <svg class="icon" aria-hidden="true"><use href="#plus"/></svg></summary><p>تتحدد بعد اعتماد التوزيع والخامات ومراجعة جاهزية الموقع للتركيب.</p></details>
-          <details><summary>متى تُحدد مقاسات الأجهزة؟ <svg class="icon" aria-hidden="true"><use href="#plus"/></svg></summary><p>قبل اعتماد توزيع الخزائن، خصوصًا للأجهزة المدمجة، لضبط مقاسات الفتحات وتحديد متطلبات التهوية والتوصيلات.</p></details>
-          <details><summary>هل يمكن تغيير الواجهات والإبقاء على الخزائن؟ <svg class="icon" aria-hidden="true"><use href="#plus"/></svg></summary><p>قد يكون ذلك ممكنًا إذا كانت هياكل الخزائن بحالة مناسبة. نفحص المقاسات والمفصلات واستقامة الوحدات قبل تحديد نطاق التجديد.</p></details>
-          <details><summary>كيف أختار مقاس الجزيرة؟ <svg class="icon" aria-hidden="true"><use href="#plus"/></svg></summary><p>حدّد استخدام الجزيرة أولًا، ثم راجع الممرات حولها ومدى فتح الأدراج والأجهزة. يعتمد المقاس النهائي على قياس الموقع.</p></details>
+          <details><summary>كيف تحددون سعر المطبخ؟ <svg class="icon" aria-hidden="true"><use href="#plus"/></svg></summary><p>يعتمد السعر على المقاسات وعدد الخزائن ونوع الأبواب والسطح. والإضافات، مثل سلال السحب وفواصل الأدراج، تدخل في الحساب.</p></details>
+          <details><summary>أقدر أطلب عرض سعر من دون مقاسات؟ <svg class="icon" aria-hidden="true"><use href="#plus"/></svg></summary><p>نعم. اذكر الحي وصف لنا المطبخ. نأخذ المقاسات النهائية في الموقع قبل التصنيع.</p></details>
+          <details><summary>متى أعرف مدة التنفيذ؟ <svg class="icon" aria-hidden="true"><use href="#plus"/></svg></summary><p>نحدّد المدة بعد الاتفاق على التصميم والخامات والتأكد من جاهزية المكان للتركيب.</p></details>
+          <details><summary>متى أختار الفرن والثلاجة؟ <svg class="icon" aria-hidden="true"><use href="#plus"/></svg></summary><p>قبل اعتماد توزيع الخزائن، خصوصًا إذا كانت الأجهزة مدمجة. نحتاج مقاس الجهاز ومساحة التهوية وموقع التوصيلات.</p></details>
+          <details><summary>أقدر أغيّر الأبواب وأبقي الخزائن؟ <svg class="icon" aria-hidden="true"><use href="#plus"/></svg></summary><p>ممكن إذا كانت الخزائن سليمة ومستوية. نفحص الأبعاد والمفصلات قبل تحديد القطع اللي تحتاج تغيير.</p></details>
+          <details><summary>كيف أختار مقاس الجزيرة؟ <svg class="icon" aria-hidden="true"><use href="#plus"/></svg></summary><p>فكّر أول إذا بتستخدم الجزيرة للتحضير أو الجلوس. بعدها نحسب عرض الممر والمساحة اللي تحتاجها الأدراج والأجهزة وقت الفتح.</p></details>
         </div>
       </div>
     </section>
@@ -108,7 +108,7 @@
       <nav class="footer-nav" aria-label="روابط التذييل">
         <a href="designs.html">التصاميم</a>
         <a href="materials.html">الخامات</a>
-        <a href="studio.html">استوديو التشطيبات</a>
+        <a href="studio.html">استوديو الخامات</a>
         <a href="services.html">الخدمات</a>
         <a href="planning.html">دليل التخطيط</a>
         <a href="journal.html">دليل تجهيز المطبخ</a>
@@ -135,7 +135,7 @@
     <div class="dialog-copy">
       <button type="button" class="close" data-close aria-label="إغلاق"><svg class="icon"><use href="#x"/></svg></button>
       <h2 id="privacy-title">خصوصية الطلب</h2>
-      <p>يعالج الموقع بيانات النموذج داخل متصفحك لتجهيز الطلب. يمكنك نسخ الطلب أو تنزيله، وإذا اخترت فتح واتساب تنتقل التفاصيل إليه لمراجعتها وإرسالها.</p>
+      <p>تبقى البيانات في متصفحك أثناء تجهيز الطلب. تقدر تنسخ الطلب أو تحمّله. إذا فتحت واتساب، تظهر التفاصيل فيه حتى ترسلها بنفسك.</p>
     </div>
   </dialog>
 </body>

@@ -76,87 +76,87 @@ const designCopy = {
   "island": {
     layout: "مطبخ بجزيرة",
     title: "جزيرة من الترافرتين",
-    description: "تصلح الجزيرة للتحضير والجلوس. راجع عرض الممر ومساحة فتح الأدراج قبل تحديد حجمها.",
+    description: "إذا بتجلس على الجزيرة، احسب مكان الكراسي مع مساحة المرور. وجرّب في المخطط فتح الأدراج اللي تقابلها.",
   },
   "island-ivory": {
     layout: "مطبخ بجزيرة",
     title: "جزيرة عاجية بسطح ممتد",
-    description: "يمتد السطح فوق جهة الجلوس. حدّد عدد المقاعد ومكانها قبل اعتماد طول الجزيرة.",
+    description: "السطح ممتد من جهة المقاعد عشان يترك مجالًا للركب. حدّد كم كرسي تحتاج قبل اختيار الطول.",
   },
   "island-graphite": {
     layout: "مطبخ بجزيرة",
     title: "جزيرة حجرية وواجهات فحمية",
-    description: "تضم الوحدات الطويلة الأجهزة ومساحات التخزين، ويظل سطح الجزيرة متاحًا للتحضير.",
+    description: "الأجهزة والتخزين على الجدار. تقدر تستخدم الجزيرة للتحضير وتخلي السطح أمامك فاضي.",
   },
   "island-walnut": {
     layout: "مطبخ بجزيرة",
     title: "جزيرة عريضة مع خزائن الجوز",
-    description: "تستوعب الجزيرة مساحة عمل مشتركة. حدّد موقع المقابس مع مسار التوصيلات قبل اعتماد التركيب.",
+    description: "إذا بتستخدم أجهزة صغيرة على الجزيرة، حدّد مكان المقابس من البداية عشان تنحسب التوصيلات.",
   },
   "ivory": {
     layout: "مطبخ زاوية",
     title: "واجهات رملية مطفية",
-    description: "توزيع على جدارين مع مساحة مفتوحة في الوسط. افحص طريقة فتح خزانة الزاوية قبل اختيار التجهيز الداخلي.",
+    description: "الجداران يتركان وسط المطبخ مفتوحًا. جرّب طريقة فتح خزانة الزاوية قبل اختيار السلة أو الرف اللي داخلها.",
   },
   "corner-oak": {
     layout: "مطبخ زاوية",
     title: "زاوية من البلوط الفاتح",
-    description: "الركن يربط منطقتي التحضير والغسيل. راجع موضع الحوض بحيث يبقى سطح العمل متصلًا وقريبًا من الموقد.",
+    description: "مكان الحوض قريب من الركن. قبل اعتماد التوزيع، تأكد أن بينه وبين الموقد سطحًا كافيًا للتحضير.",
   },
   "corner-espresso": {
     layout: "مطبخ زاوية",
     title: "زاوية بواجهات جوز داكنة",
-    description: "يمكن توزيع الأدراج العميقة على الجانب الأقرب إلى الموقد. تساعد الإضاءة تحت الخزائن في توضيح سطح العمل الداكن.",
+    description: "خلّ أدراج القدور بجانب الموقد. إضاءة تحت الخزائن العلوية تساعدك تشوف سطح العمل ليلًا.",
   },
   "corner-taupe": {
     layout: "مطبخ زاوية",
     title: "زاوية بخزائن رمادية دافئة",
-    description: "تركز الوحدات الطويلة التخزين في طرف المطبخ، وتترك الجزء الأقرب إلى الزاوية لسطح التحضير.",
+    description: "تجتمع الخزائن الطويلة في طرف واحد. كذا يبقى السطح القريب من الزاوية متصلًا للتحضير.",
   },
   "linear": {
     layout: "مطبخ مستقيم",
     title: "بلوط فاتح على جدار واحد",
-    description: "بعد وضع الحوض والموقد، تحقّق من طول سطح التحضير المتاح بينهما.",
+    description: "بعد ما تحدد مكان الحوض والموقد، شوف كم يبقى من السطح بينهما للتحضير.",
   },
   "linear-shaker": {
     layout: "مطبخ مستقيم",
     title: "مطبخ مستقيم بواجهات مؤطّرة",
-    description: "يفيد توحيد مواقع الأجهزة على الجدار في إبقاء الفراغ المقابل متاحًا للحركة. راجع أماكن المقابس والشفاط مبكرًا.",
+    description: "ترتيب كل شيء على جدار واحد يترك الجهة المقابلة مفتوحة. حدّد مكان المقابس والشفاط قبل التفصيل.",
   },
   "linear-ash": {
     layout: "مطبخ مستقيم",
     title: "خشب فاتح وأجهزة مدمجة",
-    description: "استفد من ارتفاع الجدار للتخزين، وضع الأدوات اليومية في الوحدات الأسهل وصولًا.",
+    description: "خزّن الأغراض قليلة الاستخدام في الرفوف العالية، وخَلّ الأدوات اليومية في مكان سهل الوصول.",
   },
   "galley": {
     layout: "مطبخ متوازٍ",
     title: "خشب داكن على جدارين متقابلين",
-    description: "عند القياس، راجع عرض الممر بعد فتح الأدراج وباب غسالة الأطباق.",
+    description: "قِس عرض الممر وباب غسالة الصحون مفتوح. خذ مساحة فتح الأدراج في الحسبان كذلك.",
   },
   "galley-sage": {
     layout: "مطبخ متوازٍ",
     title: "مطبخ متوازٍ بواجهات مريمية",
-    description: "يمكن تخصيص جانب للغسيل والتحضير والآخر للطهي. تأكد من بقاء الممر مريحًا لمن يستخدم الجانبين.",
+    description: "تقدر تخصّص جانبًا للغسيل والتحضير والثاني للطبخ. تأكد إن الممر يسمح باستخدام الجهتين.",
   },
   "galley-warmwood": {
     layout: "مطبخ متوازٍ",
     title: "مطبخ متوازٍ بخشب دافئ",
-    description: "راجِع فتح الأجهزة في الجهتين، خصوصًا إذا كانت الأبواب المتقابلة تُفتح في الوقت نفسه.",
+    description: "إذا كان الفرن قدّام غسالة الصحون، احسب مساحة البابين وقت الفتح.",
   },
   "walnut": {
     layout: "مطبخ على ثلاثة جدران",
     title: "واجهات بلون الجوز",
-    description: "يجمع التوزيع الحوض والموقد وسطح التحضير حول مساحة عمل واحدة. اختر تجهيز الزوايا بحسب ما تخزّنه فيها.",
+    description: "الحوض والموقد قريبان من سطح التحضير. اختر لزوايا التخزين رفوفًا أو سلالًا حسب الأغراض اللي بتحطّها فيها.",
   },
   "u-sand": {
     layout: "مطبخ على ثلاثة جدران",
     title: "خزائن رملية على ثلاثة جدران",
-    description: "تساعد المساحة المتصلة على توزيع التحضير والغسيل. راجع مواضع المقابض والأدراج قرب الركنين.",
+    description: "السطح متصل على ثلاث جهات. انتبه إلى المقابض والأدراج قرب الركنين حتى تفتح من غير ما تتقابل.",
   },
   "u-forest": {
     layout: "مطبخ على ثلاثة جدران",
     title: "أخضر داكن مع سطح حجري",
-    description: "يمكن أن تستفيد الوحدات من الركنين معًا. حدد مواقع أدوات الطبخ اليومية قبل اختيار آليات السحب.",
+    description: "يعطيك التوزيع ركنين للتخزين. حط أدوات الطبخ اليومية في الأدراج القريبة من الموقد، والأغراض اللي تستخدمها أقل في الزوايا.",
   },
 };
 
@@ -181,15 +181,15 @@ for (const button of document.querySelectorAll('[data-design]')) {
 const priorityOptions = {
   storage: {
     label: 'زيادة مساحة التخزين',
-    tip: 'راجع إمكانية إضافة خزائن طويلة، وحدّد ما تحتاج إليه يوميًا حتى يبقى قريبًا من سطح العمل.',
+    tip: 'إذا عندك جدار فاضي، شوف هل يناسبه دولاب طويل. وخَلّ الأغراض اليومية قريبة من سطح العمل.',
   },
   prep: {
     label: 'توسيع مساحة التحضير',
-    tip: 'اترك جزءًا متصلًا من سطح العمل بالقرب من الحوض، وحدّد أماكن الأجهزة الصغيرة قبل اعتماد الخزائن.',
+    tip: 'اترك مساحة بجانب الحوض للتقطيع والتحضير. حدّد مكان الأجهزة الصغيرة عشان يبقى السطح فاضي.',
   },
   seating: {
     label: 'تخصيص مكان للجلوس',
-    tip: 'حدّد مكان المقاعد بعد قياس الممر. في المساحات الضيقة، قد يكون الجلوس عند طرف المطبخ أو خارجه أنسب.',
+    tip: 'احسب مكان الكراسي وهي مسحوبة. إذا ضاق الممر، جرّب الجلوس عند طرف المطبخ.',
   },
 };
 const projectOptions = { new: 'مطبخ جديد', renew: 'تجديد مطبخ' };
@@ -220,8 +220,8 @@ if (planner) {
   });
   planner.addEventListener('change', () => {
     if (quoteLink.hidden) return;
-    title.textContent = 'تحديث التوزيع المقترح';
-    copy.textContent = 'اعرض التوزيع مرة أخرى لتحديث النموذج وفق اختياراتك.';
+    title.textContent = 'تغيّرت اختياراتك';
+    copy.textContent = 'اضغط على «شاهد التوزيع المناسب» لعرض النتيجة الجديدة.';
     tip.hidden = true;
     quoteLink.hidden = true;
   });
@@ -235,7 +235,7 @@ function initializeQuote(form) {
   if (whatsapp) {
     storeWhatsapp.href = whatsapp;
     storeWhatsapp.hidden = false;
-    document.querySelector('#quote-method').textContent = 'يمكن إرسال الطلب عبر واتساب بعد مراجعته.';
+    document.querySelector('#quote-method').textContent = 'تقدر ترسل الطلب على واتساب بعد ما تراجعه.';
   }
   if (/^https:\/\/(maps\.app\.goo\.gl\/|www\.google\.com\/maps\/)/.test(config.mapUrl)) {
     storeMap.href = config.mapUrl;
@@ -250,7 +250,7 @@ function initializeQuote(form) {
   const finishSelection = document.querySelector('#finish-selection');
   let selectedFinish = Object.hasOwn(finishes, finishKey) ? finishes[finishKey].title : '';
   if (selectedFinish) {
-    document.querySelector('#selected-finish').textContent = 'لوحة التشطيب: ' + selectedFinish;
+    document.querySelector('#selected-finish').textContent = 'الخامات المختارة: ' + selectedFinish;
     finishSelection.hidden = false;
   }
   document.querySelector('#clear-finish').addEventListener('click', () => {
@@ -265,7 +265,7 @@ function initializeQuote(form) {
   if (Object.hasOwn(priorityOptions, priority)) form.elements.priority.value = priority;
   let selectedDesign = Object.hasOwn(designCopy, key) ? designCopy[key].title : '';
   if (selectedDesign) {
-    document.querySelector('#selected-design').textContent = 'التصميم المرجعي: ' + selectedDesign;
+    document.querySelector('#selected-design').textContent = 'التصميم المختار: ' + selectedDesign;
     selection.hidden = false;
   }
   document.querySelector('#clear-design').addEventListener('click', () => {
@@ -288,7 +288,7 @@ function initializeQuote(form) {
     const fields = form.elements;
     for (const name of ['name', 'district']) {
       if (!fields[name].value.trim()) {
-        fields[name].setCustomValidity('يرجى تعبئة هذا الحقل.');
+        fields[name].setCustomValidity('عبّئ هذا الحقل.');
         fields[name].reportValidity();
         return;
       }
@@ -298,7 +298,7 @@ function initializeQuote(form) {
       .replace(/[۰-۹]/g, digit => '۰۱۲۳۴۵۶۷۸۹'.indexOf(digit))
       .replace(/[\s()-]/g, '');
     if (!/^(?:\+966|00966|966|0)?5\d{8}$/.test(phone)) {
-      phoneField.setCustomValidity('أدخل رقم جوال سعوديًا صحيحًا يبدأ بـ 05 ويتكون من عشرة أرقام.');
+      phoneField.setCustomValidity('أدخل رقم جوال سعودي. مثال 0501234567.');
       phoneField.reportValidity();
       return;
     }
@@ -311,7 +311,7 @@ function initializeQuote(form) {
       'نوع المشروع: ' + fields.project.value,
     ];
     if (selectedDesign) message.push('التصميم: ' + selectedDesign);
-    if (selectedFinish) message.push('لوحة التشطيب: ' + selectedFinish);
+    if (selectedFinish) message.push('الخامات المختارة: ' + selectedFinish);
     if (fields.stage.value) message.push('مرحلة المشروع: ' + fields.stage.value);
     if (Object.hasOwn(priorityOptions, fields.priority.value)) {
       message.push('أولوية الاستخدام: ' + priorityOptions[fields.priority.value].label);
@@ -325,8 +325,8 @@ function initializeQuote(form) {
       sendWhatsapp.hidden = false;
     }
     document.querySelector('#request-note').textContent = whatsapp
-      ? 'راجع البيانات، ثم افتح واتساب لإرسال الطلب.'
-      : 'يمكن نسخ الطلب أو تنزيله. الإرسال عبر الموقع غير متاح حاليًا.';
+      ? 'تأكد من البيانات، ثم افتح واتساب وأرسل طلبك.'
+      : 'تقدر تنسخ الطلب أو تحمّله. زر الإرسال غير متاح حاليًا.';
     requestDialog.showModal();
   });
 
@@ -340,7 +340,7 @@ function initializeQuote(form) {
       const selection = window.getSelection();
       selection.removeAllRanges();
       selection.addRange(range);
-      requestStatus.textContent = 'تم تحديد النص. استخدم أمر النسخ في جهازك.';
+      requestStatus.textContent = 'حدّدنا النص لك. انسخه من قائمة جهازك.';
     }
   });
   document.querySelector('#download-request').addEventListener('click', () => {
@@ -351,7 +351,7 @@ function initializeQuote(form) {
     link.download = 'future-kit-request.txt';
     link.click();
     setTimeout(() => URL.revokeObjectURL(url), 1000);
-    requestStatus.textContent = 'ملف الطلب جاهز للتنزيل.';
+    requestStatus.textContent = 'جهّزنا ملف الطلب للتنزيل.';
   });
 
 }

@@ -42,8 +42,8 @@ function update(selected, other, announce = true) {
   sharedUrl.value = url.href;
   sharedUrl.hidden = true;
   if (announce) {
-    status.textContent = 'تم اختيار ' + finishes[selected].title +
-      (comparison.value ? '، للمقارنة مع ' + finishes[comparison.value].title + '.' : '.');
+    status.textContent = 'اختيارك ' + finishes[selected].title +
+      (comparison.value ? '، وتقارنه مع ' + finishes[comparison.value].title + '.' : '.');
   }
 }
 
@@ -59,12 +59,12 @@ share.disabled = false;
 share.addEventListener('click', async () => {
   try {
     await navigator.clipboard.writeText(sharedUrl.value);
-    status.textContent = 'تم نسخ رابط اللوحة.';
+    status.textContent = 'نسخنا رابط الألوان.';
   } catch {
     sharedUrl.hidden = false;
     sharedUrl.focus();
     sharedUrl.select();
-    status.textContent = 'تم تحديد رابط اللوحة للنسخ.';
+    status.textContent = 'حدّدنا الرابط لك. تقدر تنسخه الآن.';
   }
 });
 update(selectedControl(), params.get('compare'), false);

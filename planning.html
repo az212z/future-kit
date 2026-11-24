@@ -39,7 +39,7 @@
         <a href="designs.html">التصاميم</a>
         <a href="services.html">الخدمات</a>
         <a href="materials.html">الخامات</a>
-        <a href="studio.html">استوديو التشطيبات</a>
+        <a href="studio.html">استوديو الخامات</a>
         <a href="planning.html" aria-current="page">دليل التخطيط</a>
         <a href="request.html" class="mobile-quote">طلب عرض سعر</a>
       </nav>
@@ -50,7 +50,7 @@
     <section class="wrap page-intro intro-with-image">
         <div class="intro-copy">
       <h1>دليل تخطيط المطبخ</h1>
-      <p>ابدأ بشكل المساحة وطريقة استخدامك للمطبخ. سيساعدك الدليل في اختيار توزيع مبدئي ومراجعته قبل طلب عرض السعر.</p></div>
+      <p>كم جدار عندك للخزائن؟ حدّد شكل المطبخ ووش تحتاج فيه، وشوف توزيعًا تبدأ منه.</p></div>
         <img class="intro-image" src="assets/studio.webp" alt="" width="900" height="1350">
     </section>
     <section class="wrap planner" aria-label="اختيار توزيع المطبخ">
@@ -66,7 +66,7 @@
             <option value="island">مساحة مفتوحة تسمح بجزيرة</option>
           </select>
         </label>
-        <label>الأولوية في الاستخدام
+        <label>وش الأهم لك في المطبخ؟
           <select name="priority" required>
             <option value="">اختر ما يهمّك أكثر</option>
             <option value="storage">زيادة مساحة التخزين</option>
@@ -74,32 +74,32 @@
             <option value="seating">تخصيص مكان للجلوس</option>
           </select>
         </label>
-        <button type="submit" class="button button-dark" disabled>عرض التوزيع المقترح <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></button>
-        <noscript><p>يمكنك مقارنة التوزيعات في الجدول أدناه.</p></noscript>
+        <button type="submit" class="button button-dark" disabled>شاهد التوزيع المناسب <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></button>
+        <noscript><p>تقدر تقارن التوزيعات في الجدول بالأسفل.</p></noscript>
       </form>
       <div class="planner-result" id="planner-result">
         <img id="planner-image" src="assets/collection-island.webp" alt="تصوّر لمطبخ مفتوح بجزيرة" width="718" height="724">
         <div class="planner-result-copy" aria-live="polite">
           <h2 id="planner-title">التوزيع المقترح</h2>
-          <p id="planner-copy">اختر شكل المساحة والأولوية في الاستخدام لعرض النموذج المناسب.</p>
+          <p id="planner-copy">اختر الجدران المتاحة والشيء اللي تحتاجه أكثر في مطبخك.</p>
           <p id="planner-tip" hidden></p>
-          <a id="planner-quote" class="line-link" href="request.html" hidden>إضافة الاختيار إلى طلب عرض السعر <svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></a>
+          <a id="planner-quote" class="line-link" href="request.html" hidden>أضف الاختيار إلى طلبك <svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></a>
         </div>
       </div>
     </section>
     <section class="wrap section compare-section">
       <h2>مقارنة التوزيعات</h2>
-      <p class="table-hint">مرّر الجدول أفقيًا للاطلاع على تفاصيل القياس.</p>
+      <p class="table-hint">حرّك الجدول يمينًا أو يسارًا لقراءة باقي التفاصيل.</p>
       <div class="table-scroll" tabindex="0" role="region" aria-label="جدول مقارنة توزيعات المطابخ">
         <table>
           <caption class="visually-hidden">التوزيع والمساحة المناسبة وما يُراجع عند القياس</caption>
           <thead><tr><th scope="col">التوزيع</th><th scope="col">متى يناسب المساحة؟</th><th scope="col">ما الذي يهم عند القياس؟</th></tr></thead>
           <tbody>
-            <tr><th scope="row">مستقيم</th><td>عند توفر جدار واحد للخزائن والأجهزة.</td><td>مساحة التحضير المتبقية بين الحوض والموقد.</td></tr>
-            <tr><th scope="row">زاوية</th><td>عندما يلتقي جداران وتبقى الجهة المقابلة مفتوحة.</td><td>سهولة الوصول إلى خزانة الزاوية.</td></tr>
-            <tr><th scope="row">متوازٍ</th><td>عند توفر جدارين متقابلين وممر بينهما.</td><td>فتح الأدراج والأجهزة من الجهتين من دون تعطيل المرور.</td></tr>
-            <tr><th scope="row">ثلاثة جدران</th><td>عندما تحيط الخزائن بمساحة العمل من ثلاث جهات.</td><td>استغلال الزوايا وترك مساحة للوقوف وفتح الأدراج.</td></tr>
-            <tr><th scope="row">جزيرة</th><td>في المساحات المفتوحة التي تسمح بالمرور حول الجزيرة.</td><td>حجم الجزيرة ووظيفتها وأي توصيلات تحتاج إليها.</td></tr>
+            <tr><th scope="row">مستقيم</th><td>إذا عندك جدار واحد للخزائن والأجهزة.</td><td>مساحة التحضير المتبقية بين الحوض والموقد.</td></tr>
+            <tr><th scope="row">زاوية</th><td>إذا كانت الخزائن على جدارين متجاورين.</td><td>سهولة الوصول إلى خزانة الزاوية.</td></tr>
+            <tr><th scope="row">متوازٍ</th><td>إذا فيه جداران متقابلان وبينهما ممر.</td><td>فتح الأدراج والأجهزة من الجهتين من دون تعطيل المرور.</td></tr>
+            <tr><th scope="row">ثلاثة جدران</th><td>إذا عندك ثلاثة جدران متصلة للخزائن.</td><td>استغلال الزوايا وترك مساحة للوقوف وفتح الأدراج.</td></tr>
+            <tr><th scope="row">جزيرة</th><td>إذا كان المطبخ مفتوحًا وفيه مجال للمشي حول الجزيرة.</td><td>حجم الجزيرة ووظيفتها وأي توصيلات تحتاج إليها.</td></tr>
           </tbody>
         </table>
       </div>
@@ -114,7 +114,7 @@
       <nav class="footer-nav" aria-label="روابط التذييل">
         <a href="designs.html">التصاميم</a>
         <a href="materials.html">الخامات</a>
-        <a href="studio.html">استوديو التشطيبات</a>
+        <a href="studio.html">استوديو الخامات</a>
         <a href="services.html">الخدمات</a>
         <a href="planning.html">دليل التخطيط</a>
         <a href="journal.html">دليل تجهيز المطبخ</a>
@@ -127,7 +127,7 @@
     <div class="dialog-copy">
       <button type="button" class="close" data-close aria-label="إغلاق"><svg class="icon"><use href="#x"/></svg></button>
       <h2 id="privacy-title">خصوصية الطلب</h2>
-      <p>يعالج الموقع بيانات النموذج داخل متصفحك لتجهيز الطلب. يمكنك نسخ الطلب أو تنزيله، وإذا اخترت فتح واتساب تنتقل التفاصيل إليه لمراجعتها وإرسالها.</p>
+      <p>تبقى البيانات في متصفحك أثناء تجهيز الطلب. تقدر تنسخ الطلب أو تحمّله. إذا فتحت واتساب، تظهر التفاصيل فيه حتى ترسلها بنفسك.</p>
     </div>
   </dialog>
 </body>
