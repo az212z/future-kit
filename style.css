@@ -416,3 +416,47 @@ input, select, textarea { border-radius: 6px; }
   .hero-image img { aspect-ratio: 1.72; }
   .header nav a[aria-current] { background: #0f3427; }
 }
+
+/* The F from the supplied wordmark is used as the photography signature. */
+.brand-stamp {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: var(--stamp-size, 65px);
+  aspect-ratio: 1;
+  background: var(--green);
+  clip-path: polygon(20% 0,100% 0,100% 80%,80% 100%,0 100%,0 20%);
+}
+.brand-stamp::before,
+footer::after {
+  content: '';
+  background: var(--gold);
+  mask: url('assets/mark.png') center / contain no-repeat;
+}
+.brand-stamp::before { width: 55%; height: 59%; }
+.hero-image .signed-caption {
+  display: flex;
+  align-items: end;
+  flex-direction: row-reverse;
+  gap: 5px;
+  padding: 0;
+  background: transparent;
+}
+.signed-caption > :last-child { padding: 4px 9px; background: var(--dark); color: var(--paper); }
+.catalog-visual { position: relative; min-width: 0; }
+.catalog-visual .brand-stamp { position: absolute; inset-inline-end: 10px; inset-block-end: 10px; --stamp-size: 50px; }
+footer { position: relative; isolation: isolate; }
+footer::after {
+  position: absolute;
+  z-index: -1;
+  inset-inline-start: var(--gutter);
+  inset-block: 13px 0;
+  width: min(28vw, 265px);
+  opacity: .16;
+  mask-position: right bottom;
+  pointer-events: none;
+}
+@media (max-width: 640px) {
+  .signed-caption .brand-stamp { --stamp-size: 50px; }
+  .catalog-visual .brand-stamp { --stamp-size: 40px; }
+}
