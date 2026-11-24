@@ -29,16 +29,29 @@ for (const button of filters) {
 
 const designCopy = {
   island: {
+    layout: 'مطبخ بجزيرة',
     title: 'جزيرة من الترافرتين',
     description: 'تضيف الجزيرة مساحة للتحضير ومقاعد باتجاه الجلسة. يُحدد حجمها بعد حساب الممرات ومدى فتح الأدراج والأجهزة.',
   },
   ivory: {
+    layout: 'مطبخ زاوية',
     title: 'واجهات رملية مطفية',
     description: 'توزيع على جدارين متجاورين يترك وسط المطبخ مفتوحًا للحركة. تساعد الواجهات الفاتحة على إظهار تفاصيل الأبواب في المساحات محدودة الإضاءة.',
   },
   walnut: {
+    layout: 'مطبخ على ثلاثة جدران',
     title: 'واجهات بلون الجوز',
     description: 'يجمع التوزيع الحوض والموقد وسطح التحضير على ثلاثة جدران. تُراجع المسافة بين الوحدات المتقابلة حتى يسهل فتحها والعمل بينها.',
+  },
+  linear: {
+    layout: 'مطبخ مستقيم',
+    title: 'بلوط فاتح على جدار واحد',
+    description: 'ترتيب الخزائن والأجهزة على جدار واحد يترك الفراغ المقابل مفتوحًا. يُراجع طول السطح المتاح بعد تحديد مقاسي الحوض والموقد.',
+  },
+  galley: {
+    layout: 'مطبخ متوازٍ',
+    title: 'خشب داكن على جدارين متقابلين',
+    description: 'يتيح المطبخ المتوازي سطحَي عمل على جانبي الممر. عند القياس، نراجع المساحة بعد فتح الأدراج وباب غسالة الأطباق، ومكان الوقوف أمامها.',
   },
 };
 
@@ -55,6 +68,55 @@ for (const button of document.querySelectorAll('[data-design]')) {
     document.querySelector('#design-description').textContent = design.description;
     document.querySelector('#pick-design').href = 'request.html?design=' + encodeURIComponent(key);
     designDialog.showModal();
+  });
+}
+
+const priorityOptions = {
+  storage: {
+    label: 'زيادة مساحة التخزين',
+    tip: 'راجع إمكانية إضافة خزائن طويلة، وحدّد ما تحتاج إليه يوميًا حتى يبقى قريبًا من سطح العمل.',
+  },
+  prep: {
+    label: 'توسيع مساحة التحضير',
+    tip: 'اترك جزءًا متصلًا من سطح العمل بالقرب من الحوض، وحدّد أماكن الأجهزة الصغيرة قبل اعتماد الخزائن.',
+  },
+  seating: {
+    label: 'تخصيص مكان للجلوس',
+    tip: 'حدّد مكان المقاعد بعد قياس الممر. في المساحات الضيقة، قد يكون الجلوس عند طرف المطبخ أو خارجه أنسب.',
+  },
+};
+const projectOptions = { new: 'مطبخ جديد', renew: 'تجديد مطبخ' };
+
+const planner = document.querySelector('#layout-planner');
+if (planner) {
+  const resultImage = document.querySelector('#planner-image');
+  const title = document.querySelector('#planner-title');
+  const copy = document.querySelector('#planner-copy');
+  const tip = document.querySelector('#planner-tip');
+  const quoteLink = document.querySelector('#planner-quote');
+  planner.querySelector('[type=submit]').disabled = false;
+  planner.addEventListener('submit', event => {
+    event.preventDefault();
+    const key = planner.elements.shape.value;
+    const priority = planner.elements.priority.value;
+    if (!Object.hasOwn(designCopy, key) || !Object.hasOwn(priorityOptions, priority)) return;
+    const design = designCopy[key];
+    title.textContent = design.layout;
+    copy.textContent = design.description;
+    tip.textContent = priorityOptions[priority].tip;
+    tip.hidden = false;
+    resultImage.src = 'assets/collection-' + key + '.webp';
+    resultImage.alt = 'تصوّر تصميمي: ' + design.title;
+    const params = new URLSearchParams({ design: key, priority });
+    quoteLink.href = 'request.html?' + params;
+    quoteLink.hidden = false;
+  });
+  planner.addEventListener('change', () => {
+    if (quoteLink.hidden) return;
+    title.textContent = 'تحديث التوزيع المقترح';
+    copy.textContent = 'اعرض التوزيع مرة أخرى لتحديث النموذج وفق اختياراتك.';
+    tip.hidden = true;
+    quoteLink.hidden = true;
   });
 }
 
@@ -76,6 +138,10 @@ function initializeQuote(form) {
   const selection = document.querySelector('#selection');
   const pageUrl = new URL(location.href);
   const key = pageUrl.searchParams.get('design');
+  const project = pageUrl.searchParams.get('project');
+  const priority = pageUrl.searchParams.get('priority');
+  if (Object.hasOwn(projectOptions, project)) form.elements.project.value = projectOptions[project];
+  if (Object.hasOwn(priorityOptions, priority)) form.elements.priority.value = priority;
   let selectedDesign = Object.hasOwn(designCopy, key) ? designCopy[key].title : '';
   if (selectedDesign) {
     document.querySelector('#selected-design').textContent = 'التصميم المرجعي: ' + selectedDesign;
@@ -124,6 +190,10 @@ function initializeQuote(form) {
       'نوع المشروع: ' + fields.project.value,
     ];
     if (selectedDesign) message.push('التصميم: ' + selectedDesign);
+    if (fields.stage.value) message.push('مرحلة المشروع: ' + fields.stage.value);
+    if (Object.hasOwn(priorityOptions, fields.priority.value)) {
+      message.push('أولوية الاستخدام: ' + priorityOptions[fields.priority.value].label);
+    }
     if (fields.notes.value.trim()) message.push('الملاحظات: ' + fields.notes.value.trim());
 
     requestText.textContent = message.join('\n');

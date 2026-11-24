@@ -36,7 +36,9 @@
       <nav id="navigation" aria-label="القائمة الرئيسية">
         <a href="./">الرئيسية</a>
         <a href="designs.html" aria-current="page">التصاميم</a>
+        <a href="services.html">الخدمات</a>
         <a href="materials.html">الخامات</a>
+        <a href="planning.html">دليل التخطيط</a>
         <a href="request.html" class="mobile-quote">طلب عرض سعر</a>
       </nav>
       <a class="button button-outline head-quote" href="request.html">طلب عرض سعر <svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></a>
@@ -51,6 +53,8 @@
       <div class="catalog-toolbar">
         <div class="filters" role="group" aria-label="تصفية التصاميم">
           <button type="button" aria-pressed="true" data-filter="all">جميع التصاميم</button>
+          <button type="button" aria-pressed="false" data-filter="linear">مطبخ مستقيم</button>
+          <button type="button" aria-pressed="false" data-filter="galley">مطبخ متوازٍ</button>
           <button type="button" aria-pressed="false" data-filter="corner">مطبخ زاوية</button>
           <button type="button" aria-pressed="false" data-filter="island">مطبخ بجزيرة</button>
           <button type="button" aria-pressed="false" data-filter="u-shape">مطبخ على ثلاثة جدران</button>
@@ -85,7 +89,20 @@
             <button type="button" class="line-link design-button" data-design="walnut" aria-haspopup="dialog">تفاصيل التصميم <svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></button>
           </div>
         </article>
+        <article class="design" data-category="linear">
+          <img src="assets/collection-linear.webp" alt="خزائن فاتحة وأجهزة مرتبة على جدار واحد" width="800" height="800" loading="lazy">
+          <div class="design-body"><p class="eyebrow">مطبخ مستقيم</p><h2>بلوط فاتح على جدار واحد</h2><p>تجتمع الأجهزة والخزائن على امتداد جدار واحد، ويظل الجانب المقابل مفتوحًا.</p>
+            <button type="button" class="line-link design-button" data-design="linear" aria-haspopup="dialog">تفاصيل التصميم <svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></button>
+          </div>
+        </article>
+        <article class="design" data-category="galley">
+          <img src="assets/collection-galley.webp" alt="خزائن مطبخ متوازية على جانبي الممر" width="800" height="800" loading="lazy">
+          <div class="design-body"><p class="eyebrow">مطبخ متوازٍ</p><h2>خشب داكن على جدارين متقابلين</h2><p>يوزّع السطحان المتقابلان مناطق التحضير والغسيل والتخزين على جانبي الممر.</p>
+            <button type="button" class="line-link design-button" data-design="galley" aria-haspopup="dialog">تفاصيل التصميم <svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></button>
+          </div>
+        </article>
       </div>
+      <div class="quiet-cta design-next"><div><h2>أي توزيع يناسب مطبخك؟</h2><p>اختر شكل المساحة وما تحتاجه من تحضير وتخزين أو جلوس.</p></div><a href="planning.html" class="button button-dark">دليل التخطيط <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></a></div>
     </section>
   </main>
   <footer>
@@ -97,7 +114,8 @@
       <nav class="footer-nav" aria-label="روابط التذييل">
         <a href="designs.html">التصاميم</a>
         <a href="materials.html">الخامات</a>
-        <a href="./#process">مراحل التنفيذ</a>
+        <a href="services.html">الخدمات</a>
+        <a href="planning.html">دليل التخطيط</a>
         <a href="request.html#faq">الأسئلة الشائعة</a>
         <button type="button" class="footer-link" id="open-privacy" aria-haspopup="dialog">خصوصية الطلب</button>
       </nav>

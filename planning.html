@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="ar-SA" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f4f1e7">
+  <title>دليل تخطيط المطبخ | فيوتشر كيت</title>
+  <meta name="description" content="دليل تفاعلي لمقارنة توزيعات المطابخ، وتحديد أولويات التحضير والتخزين واختيار تصور لإضافته لطلب عرض السعر.">
+  <meta property="og:title" content="دليل تخطيط المطبخ | فيوتشر كيت">
+  <meta property="og:description" content="دليل تفاعلي لمقارنة توزيعات المطابخ، وتحديد أولويات التحضير والتخزين واختيار تصور لإضافته لطلب عرض السعر.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://az212z.github.io/future-kit/planning.html">
+  <meta property="og:image" content="https://az212z.github.io/future-kit/assets/collection-island.webp">
+  <link rel="canonical" href="https://az212z.github.io/future-kit/planning.html">
+  <link rel="icon" href="assets/mark.png" type="image/png">
+  <link rel="preload" href="assets/noto-naskh-arabic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="fonts.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="config.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">انتقل إلى المحتوى</a>
+  <svg class="symbols" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="arrow" viewBox="0 0 24 24"><path d="M20 12H4m0 0 6-6m-6 6 6 6"/></symbol>
+    <symbol id="diagonal" viewBox="0 0 24 24"><path d="M18 18 6 6m0 10V6h10"/></symbol>
+    <symbol id="pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 11-8 11S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+    <symbol id="menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="x" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
+    <symbol id="plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  </svg>
+  <header class="header" id="top">
+    <div class="header-inner wrap">
+      <a class="brand" href="./" aria-label="فيوتشر كيت، الرئيسية"><img src="assets/logo.png" width="960" height="315" alt="فيوتشر كيت"></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation" aria-label="القائمة"><svg class="icon" aria-hidden="true"><use href="#menu"/></svg></button>
+      <nav id="navigation" aria-label="القائمة الرئيسية">
+        <a href="./">الرئيسية</a>
+        <a href="designs.html">التصاميم</a>
+        <a href="services.html">الخدمات</a>
+        <a href="materials.html">الخامات</a>
+        <a href="planning.html" aria-current="page">دليل التخطيط</a>
+        <a href="request.html" class="mobile-quote">طلب عرض سعر</a>
+      </nav>
+      <a class="button button-outline head-quote" href="request.html">طلب عرض سعر <svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></a>
+    </div>
+  </header>
+  <main id="main">
+    <section class="wrap page-intro">
+      <h1>دليل تخطيط المطبخ</h1>
+      <p>ابدأ بشكل المساحة وطريقة استخدامك للمطبخ. سيساعدك الدليل في اختيار توزيع مبدئي ومراجعته قبل طلب عرض السعر.</p>
+    </section>
+    <section class="wrap planner" aria-label="اختيار توزيع المطبخ">
+      <form id="layout-planner" class="planner-form">
+        <h2>ما شكل المساحة؟</h2>
+        <label>الجدران المتاحة
+          <select name="shape" required>
+            <option value="">اختر شكل المساحة</option>
+            <option value="linear">جدار واحد</option>
+            <option value="ivory">جداران متجاوران</option>
+            <option value="galley">جداران متقابلان</option>
+            <option value="walnut">ثلاثة جدران متصلة</option>
+            <option value="island">مساحة مفتوحة تسمح بجزيرة</option>
+          </select>
+        </label>
+        <label>الأولوية في الاستخدام
+          <select name="priority" required>
+            <option value="">اختر ما يهمّك أكثر</option>
+            <option value="storage">زيادة مساحة التخزين</option>
+            <option value="prep">توسيع مساحة التحضير</option>
+            <option value="seating">تخصيص مكان للجلوس</option>
+          </select>
+        </label>
+        <button type="submit" class="button button-dark" disabled>عرض التوزيع المقترح <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></button>
+        <noscript><p>يمكنك مقارنة التوزيعات في الجدول أدناه.</p></noscript>
+      </form>
+      <div class="planner-result" id="planner-result">
+        <img id="planner-image" src="assets/collection-island.webp" alt="تصوّر لمطبخ مفتوح بجزيرة" width="718" height="724">
+        <div class="planner-result-copy" aria-live="polite">
+          <h2 id="planner-title">التوزيع المقترح</h2>
+          <p id="planner-copy">اختر شكل المساحة والأولوية في الاستخدام لعرض النموذج المناسب.</p>
+          <p id="planner-tip" hidden></p>
+          <a id="planner-quote" class="line-link" href="request.html" hidden>إضافة الاختيار إلى طلب عرض السعر <svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></a>
+        </div>
+      </div>
+    </section>
+    <section class="wrap section compare-section">
+      <h2>مقارنة التوزيعات</h2>
+      <p class="table-hint">مرّر الجدول أفقيًا للاطلاع على تفاصيل القياس.</p>
+      <div class="table-scroll" tabindex="0" role="region" aria-label="جدول مقارنة توزيعات المطابخ">
+        <table>
+          <caption class="visually-hidden">التوزيع والمساحة المناسبة وما يُراجع عند القياس</caption>
+          <thead><tr><th scope="col">التوزيع</th><th scope="col">متى يناسب المساحة؟</th><th scope="col">ما الذي نراجعه؟</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">مستقيم</th><td>عند توفر جدار واحد للخزائن والأجهزة.</td><td>مساحة التحضير المتبقية بين الحوض والموقد.</td></tr>
+            <tr><th scope="row">زاوية</th><td>عندما يلتقي جداران وتبقى الجهة المقابلة مفتوحة.</td><td>سهولة الوصول إلى خزانة الزاوية.</td></tr>
+            <tr><th scope="row">متوازٍ</th><td>عند توفر جدارين متقابلين وممر بينهما.</td><td>فتح الأدراج والأجهزة من الجهتين من دون تعطيل المرور.</td></tr>
+            <tr><th scope="row">ثلاثة جدران</th><td>عندما تحيط الخزائن بمساحة العمل من ثلاث جهات.</td><td>استغلال الزوايا وترك مساحة للوقوف وفتح الأدراج.</td></tr>
+            <tr><th scope="row">جزيرة</th><td>في المساحات المفتوحة التي تسمح بالمرور حول الجزيرة.</td><td>حجم الجزيرة ووظيفتها وأي توصيلات تحتاج إليها.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="wrap footer-inner">
+      <div class="footer-brand">
+        <a class="brand" href="./" aria-label="فيوتشر كيت، الرئيسية"><img src="assets/logo-light.png" alt="فيوتشر كيت" width="960" height="315"></a>
+        <p>تصميم وتفصيل المطابخ في الرياض</p>
+      </div>
+      <nav class="footer-nav" aria-label="روابط التذييل">
+        <a href="designs.html">التصاميم</a>
+        <a href="materials.html">الخامات</a>
+        <a href="services.html">الخدمات</a>
+        <a href="planning.html">دليل التخطيط</a>
+        <a href="request.html#faq">الأسئلة الشائعة</a>
+        <button type="button" class="footer-link" id="open-privacy" aria-haspopup="dialog">خصوصية الطلب</button>
+      </nav>
+    </div>
+  </footer>
+  <dialog id="privacy-dialog" aria-labelledby="privacy-title">
+    <div class="dialog-copy">
+      <button type="button" class="close" data-close aria-label="إغلاق"><svg class="icon"><use href="#x"/></svg></button>
+      <h2 id="privacy-title">خصوصية الطلب</h2>
+      <p>يعالج الموقع بيانات النموذج داخل متصفحك لتجهيز الطلب. يمكنك نسخ الطلب أو تنزيله، وإذا اخترت فتح واتساب تنتقل التفاصيل إليه لمراجعتها وإرسالها.</p>
+    </div>
+  </dialog>
+</body>
+</html>

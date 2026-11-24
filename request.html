@@ -36,7 +36,9 @@
       <nav id="navigation" aria-label="القائمة الرئيسية">
         <a href="./">الرئيسية</a>
         <a href="designs.html">التصاميم</a>
+        <a href="services.html">الخدمات</a>
         <a href="materials.html">الخامات</a>
+        <a href="planning.html">دليل التخطيط</a>
         <a href="request.html" aria-current="page" class="mobile-quote">طلب عرض سعر</a>
       </nav>
       <a class="button button-outline head-quote" href="request.html" aria-current="page">طلب عرض سعر <svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></a>
@@ -57,6 +59,10 @@
             <label>رقم الجوال <input name="phone" type="tel" required autocomplete="tel" inputmode="tel" dir="ltr" placeholder="05XXXXXXXX" maxlength="24"></label>
             <label>الحي في الرياض <input name="district" required autocomplete="address-level3" maxlength="70"></label>
             <label>نوع المشروع <select name="project" required><option value="">اختر نوع المشروع</option><option>مطبخ جديد</option><option>تجديد مطبخ</option></select></label>
+          </div>
+          <div class="fields extra-fields">
+            <label>مرحلة المشروع <small>(اختياري)</small><select name="stage"><option value="">اختر المرحلة</option><option>في مرحلة التخطيط</option><option>الموقع تحت التجهيز</option><option>الموقع جاهز للقياس</option></select></label>
+            <label>أولوية الاستخدام <small>(اختياري)</small><select name="priority"><option value="">اختر الأولوية</option><option value="storage">زيادة مساحة التخزين</option><option value="prep">توسيع مساحة التحضير</option><option value="seating">تخصيص مكان للجلوس</option></select></label>
           </div>
           <label>المقاسات وملاحظات المشروع <small>(اختياري)</small><textarea name="notes" rows="4" maxlength="400" placeholder="المقاسات التقريبية، التوزيع المفضل، أو نوع الخامة"></textarea></label>
           <div class="selection" id="selection" hidden><span id="selected-design"></span><button type="button" id="clear-design">إزالة التصميم</button></div>
@@ -82,6 +88,8 @@
           <details><summary>هل يلزم توفر المقاسات عند تقديم الطلب؟ <svg class="icon" aria-hidden="true"><use href="#plus"/></svg></summary><p>يمكن تجهيز الطلب باسم الحي ووصف المشروع. تُعتمد مقاسات التصنيع بعد قياس الموقع.</p></details>
           <details><summary>متى تتحدد مدة التنفيذ؟ <svg class="icon" aria-hidden="true"><use href="#plus"/></svg></summary><p>تتحدد بعد اعتماد التوزيع والخامات ومراجعة جاهزية الموقع للتركيب.</p></details>
           <details><summary>متى تُحدد مقاسات الأجهزة؟ <svg class="icon" aria-hidden="true"><use href="#plus"/></svg></summary><p>قبل اعتماد توزيع الخزائن، خصوصًا للأجهزة المدمجة، لضبط مقاسات الفتحات وتحديد متطلبات التهوية والتوصيلات.</p></details>
+          <details><summary>هل يمكن تغيير الواجهات والإبقاء على الخزائن؟ <svg class="icon" aria-hidden="true"><use href="#plus"/></svg></summary><p>قد يكون ذلك ممكنًا إذا كانت هياكل الخزائن بحالة مناسبة. نراجع المقاسات والمفصلات واستقامة الوحدات قبل تحديد نطاق التجديد.</p></details>
+          <details><summary>كيف أختار مقاس الجزيرة؟ <svg class="icon" aria-hidden="true"><use href="#plus"/></svg></summary><p>حدّد استخدام الجزيرة أولًا، ثم راجع الممرات حولها ومدى فتح الأدراج والأجهزة. يعتمد المقاس النهائي على قياس الموقع.</p></details>
         </div>
       </div>
     </section>
@@ -95,7 +103,8 @@
       <nav class="footer-nav" aria-label="روابط التذييل">
         <a href="designs.html">التصاميم</a>
         <a href="materials.html">الخامات</a>
-        <a href="./#process">مراحل التنفيذ</a>
+        <a href="services.html">الخدمات</a>
+        <a href="planning.html">دليل التخطيط</a>
         <a href="request.html#faq">الأسئلة الشائعة</a>
         <button type="button" class="footer-link" id="open-privacy" aria-haspopup="dialog">خصوصية الطلب</button>
       </nav>
