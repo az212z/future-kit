@@ -1,4 +1,5 @@
 import { finishes } from './finishes.js';
+import { initializeSavedDesigns } from './saved-designs.js';
 
 const menuToggle = document.querySelector('.menu-toggle');
 const navigation = document.querySelector('#navigation');
@@ -159,6 +160,8 @@ const designCopy = {
     description: "يعطيك التوزيع ركنين للتخزين. حط أدوات الطبخ اليومية في الأدراج القريبة من الموقد، والأغراض اللي تستخدمها أقل في الزوايا.",
   },
 };
+
+initializeSavedDesigns(designCopy);
 
 const designDialog = document.querySelector('#design-dialog');
 for (const button of document.querySelectorAll('[data-design]')) {

@@ -12,6 +12,7 @@ const comparisonPlaceholder = comparison.options[0];
 const params = new URLSearchParams(location.search);
 const defaultFinish = controls[0].value;
 const initial = params.get('finish');
+const design = params.get('design');
 
 function paint(board, key) {
   const finish = finishes[key];
@@ -33,7 +34,9 @@ function update(selected, other, announce = true) {
   reference.hidden = !comparison.value;
   studio.classList.toggle('is-comparing', !reference.hidden);
   if (!reference.hidden) paint(reference, comparison.value);
-  quote.href = 'request.html?' + new URLSearchParams({ finish: selected });
+  const quoteParams = new URLSearchParams({ finish: selected });
+  if (design && /^[a-z-]{1,40}$/.test(design)) quoteParams.set('design', design);
+  quote.href = 'request.html?' + quoteParams;
   const url = new URL(location.href);
   url.searchParams.set('finish', selected);
   if (comparison.value) url.searchParams.set('compare', comparison.value);
