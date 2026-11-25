@@ -54,7 +54,7 @@ export function initializeSavedDesigns(designs) {
       selected = selected.filter(item => item !== key);
     } else {
       if (selected.length >= limit) {
-        status.textContent = 'تقدر تحفظ ٣ تصاميم. أزل واحدًا قبل إضافة تصميم آخر.';
+        status.textContent = 'وصلت إلى ثلاثة تصاميم. أزل أحدها قبل حفظ تصميم آخر.';
         return;
       }
       selected = [...selected, key];
@@ -63,7 +63,7 @@ export function initializeSavedDesigns(designs) {
     try {
       localStorage.setItem(storageKey, JSON.stringify(selected));
     } catch {
-      notice = 'اختياراتك محفوظة إلى أن تغادر هذه الصفحة.';
+      notice = 'اختياراتك متاحة إلى أن تغادر هذه الصفحة.';
     }
     update(notice);
   }
@@ -81,7 +81,7 @@ export function initializeSavedDesigns(designs) {
 
   function renderComparison() {
     help.textContent = selected.length
-      ? 'شوف التوزيع والتفاصيل جنبًا إلى جنب. إذا استقرّ اختيارك، أضفه للطلب.'
+      ? 'قارن الصور وتوزيع المطابخ. إذا اخترت تصميمًا، أضفه إلى طلبك.'
       : 'أغلق النافذة واحفظ تصميمًا من المعرض.';
     grid.tabIndex = selected.length > 1 ? 0 : -1;
     scrollHint.hidden = selected.length < limit;
@@ -107,7 +107,7 @@ export function initializeSavedDesigns(designs) {
       const quote = document.createElement('a');
       quote.className = 'button button-dark';
       quote.href = 'request.html?' + new URLSearchParams({ design: key });
-      quote.textContent = 'أضف للطلب';
+      quote.textContent = 'أضف إلى الطلب';
       const finish = document.createElement('a');
       finish.className = 'line-link';
       finish.href = 'studio.html?' + new URLSearchParams({ design: key });
