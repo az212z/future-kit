@@ -18,7 +18,7 @@ function paint(board, key) {
   const finish = finishes[key];
   const image = board.querySelector('img');
   image.src = 'assets/finish-board-' + key + '.webp';
-  image.alt = 'تصوّر مطبخ بتشطيب ' + finish.title;
+  image.alt = 'تصوّر للمطبخ بخامات ' + finish.title;
   for (const name of ['title', 'front', 'surface', 'detail']) {
     board.querySelector('[data-' + name + ']').textContent = finish[name];
   }
@@ -45,8 +45,9 @@ function update(selected, other, announce = true) {
   sharedUrl.value = url.href;
   sharedUrl.hidden = true;
   if (announce) {
-    status.textContent = 'اخترت ' + finishes[selected].title +
-      (comparison.value ? '، وتعرضه بجانب ' + finishes[comparison.value].title + '.' : '.');
+    status.textContent = comparison.value
+      ? 'المقارنة بين ' + finishes[selected].title + ' و' + finishes[comparison.value].title + '.'
+      : 'الخامات المعروضة: ' + finishes[selected].title + '.';
   }
 }
 
@@ -62,12 +63,12 @@ share.disabled = false;
 share.addEventListener('click', async () => {
   try {
     await navigator.clipboard.writeText(sharedUrl.value);
-    status.textContent = 'تم نسخ رابط الألوان.';
+    status.textContent = 'تم نسخ رابط الاختيار.';
   } catch {
     sharedUrl.hidden = false;
     sharedUrl.focus();
     sharedUrl.select();
-    status.textContent = 'الرابط محدد. تقدر تنسخه الآن.';
+    status.textContent = 'الرابط محدّد. استخدم أمر النسخ في جهازك.';
   }
 });
 update(selectedControl(), params.get('compare'), false);

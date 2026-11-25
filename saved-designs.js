@@ -10,14 +10,14 @@ export function initializeSavedDesigns(designs) {
   const toolbar = document.createElement('div');
   toolbar.className = 'saved-toolbar';
   toolbar.hidden = true;
-  toolbar.innerHTML = '<p class="saved-status" role="status"></p><button type="button" class="button button-light" aria-haspopup="dialog">التصاميم المحفوظة <span class="saved-count"></span></button>';
+  toolbar.innerHTML = '<p class="saved-status" role="status"></p><button type="button" class="button button-light" aria-haspopup="dialog">مقارنة التصاميم <span class="saved-count"></span></button>';
   const status = toolbar.querySelector('.saved-status');
   const open = toolbar.querySelector('button');
   const count = toolbar.querySelector('.saved-count');
   const dialog = document.createElement('dialog');
   dialog.className = 'saved-dialog';
   dialog.setAttribute('aria-labelledby', 'saved-title');
-  dialog.innerHTML = '<div class="saved-dialog-head"><h2 id="saved-title">اختياراتك للمطبخ</h2><button type="button" class="button button-outline" data-close>إغلاق</button></div><p class="saved-dialog-note"></p><p class="saved-scroll-hint" hidden>حرّك المقارنة لعرض التصميم الثالث.</p><div class="saved-grid" role="region" aria-label="مقارنة التصاميم"></div>';
+  dialog.innerHTML = '<div class="saved-dialog-head"><h2 id="saved-title">التصاميم المحفوظة</h2><button type="button" class="button button-outline" data-close>إغلاق</button></div><p class="saved-dialog-note"></p><p class="saved-scroll-hint" hidden>مرّر المقارنة أفقيًا لرؤية التصميم الثالث.</p><div class="saved-grid" role="region" aria-label="مقارنة التصاميم"></div>';
   const grid = dialog.querySelector('.saved-grid');
   const help = dialog.querySelector('.saved-dialog-note');
   const scrollHint = dialog.querySelector('.saved-scroll-hint');
@@ -45,7 +45,7 @@ export function initializeSavedDesigns(designs) {
     }
     toolbar.hidden = selected.length === 0;
     count.textContent = numbers.format(selected.length);
-    status.textContent = message || 'قارن بين اختياراتك قبل الطلب';
+    status.textContent = message || 'احفظ حتى ثلاثة تصاميم للمقارنة.';
     if (dialog.open) renderComparison();
   }
 
@@ -54,7 +54,7 @@ export function initializeSavedDesigns(designs) {
       selected = selected.filter(item => item !== key);
     } else {
       if (selected.length >= limit) {
-        status.textContent = 'وصلت إلى ثلاثة تصاميم. أزل أحدها قبل حفظ تصميم آخر.';
+        status.textContent = 'لديك ثلاثة تصاميم محفوظة. أزل أحدها لإضافة تصميم جديد.';
         return;
       }
       selected = [...selected, key];
@@ -63,7 +63,7 @@ export function initializeSavedDesigns(designs) {
     try {
       localStorage.setItem(storageKey, JSON.stringify(selected));
     } catch {
-      notice = 'اختياراتك متاحة إلى أن تغادر هذه الصفحة.';
+      notice = 'تعذّر حفظ التصاميم في المتصفح. يمكنك مقارنتها أثناء بقائك في الصفحة.';
     }
     update(notice);
   }
@@ -81,8 +81,8 @@ export function initializeSavedDesigns(designs) {
 
   function renderComparison() {
     help.textContent = selected.length
-      ? 'قارن الصور وتوزيع المطابخ. إذا اخترت تصميمًا، أضفه إلى طلبك.'
-      : 'أغلق النافذة واحفظ تصميمًا من المعرض.';
+      ? 'قارن التوزيع والصورة، ثم أضف التصميم الذي تفضّله إلى الطلب أو اختر له خامات.'
+      : 'احفظ تصميمًا من المعرض لبدء المقارنة.';
     grid.tabIndex = selected.length > 1 ? 0 : -1;
     scrollHint.hidden = selected.length < limit;
     grid.replaceChildren();
@@ -111,7 +111,7 @@ export function initializeSavedDesigns(designs) {
       const finish = document.createElement('a');
       finish.className = 'line-link';
       finish.href = 'studio.html?' + new URLSearchParams({ design: key });
-      finish.textContent = 'اختر الخامة';
+      finish.textContent = 'اختيار الخامات';
       const remove = document.createElement('button');
       remove.type = 'button';
       remove.className = 'line-link';

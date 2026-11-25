@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#144131">
   <title>طلب عرض سعر | فيوتشر كيت</title>
-  <meta name="description" content="جهّز طلب عرض سعر لمطبخ جديد أو لتجديد مطبخ في الرياض، وأضف المقاسات والتصميم المفضل.">
+  <meta name="description" content="جهّز طلب عرض سعر لمطبخ جديد أو تجديد مطبخ في الرياض. أضف التفاصيل والتصاميم والخامات التي تعجبك ثم راجع الطلب.">
   <meta property="og:title" content="طلب عرض سعر | فيوتشر كيت">
-  <meta property="og:description" content="جهّز طلب عرض سعر لمطبخ جديد أو لتجديد مطبخ في الرياض، وأضف المقاسات والتصميم المفضل.">
+  <meta property="og:description" content="جهّز طلب عرض سعر لمطبخ جديد أو تجديد مطبخ في الرياض. أضف التفاصيل والتصاميم والخامات التي تعجبك ثم راجع الطلب.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://az212z.github.io/future-kit/request.html">
   <meta property="og:image" content="https://az212z.github.io/future-kit/assets/room.webp">
@@ -51,13 +51,13 @@
       <div class="page-intro">
         <div class="intro-copy">
         <h1>طلب عرض سعر</h1>
-        <p>ابدأ باسم الحي ونوع المشروع. إذا عندك مقاسات تقريبية، أضفها في خانة الملاحظات.</p>
+        <p>اذكر الحي وحدّد نوع المشروع. إذا كانت لديك مقاسات تقريبية أو أجهزة تريد استخدامها، أضفها في الملاحظات.</p>
         </div>
       </div>
       <div class="quote-grid">
         <form id="quote-form" class="quote-form" aria-labelledby="quote-form-title">
           <h2 id="quote-form-title">تفاصيل المطبخ</h2>
-          <noscript><p>فعّل JavaScript في متصفحك حتى تقدر تعبّي الطلب.</p></noscript>
+          <noscript><p>فعّل JavaScript في متصفحك لاستخدام نموذج الطلب.</p></noscript>
           <div class="fields">
             <label>الاسم <input name="name" required autocomplete="name" maxlength="70"></label>
             <label>رقم الجوال <input name="phone" type="tel" required autocomplete="tel" inputmode="tel" dir="ltr" placeholder="05XXXXXXXX" maxlength="24"></label>
@@ -68,17 +68,17 @@
             <label>مرحلة المشروع <small>(اختياري)</small><select name="stage"><option value="">اختر المرحلة</option><option>في مرحلة التخطيط</option><option>الموقع تحت التجهيز</option><option>الموقع جاهز للقياس</option></select></label>
             <label>أولوية الاستخدام <small>(اختياري)</small><select name="priority"><option value="">اختر الأولوية</option><option value="storage">زيادة مساحة التخزين</option><option value="prep">توسيع مساحة التحضير</option><option value="seating">تخصيص مكان للجلوس</option></select></label>
           </div>
-          <label>المقاسات وملاحظات المشروع <small>(اختياري)</small><textarea name="notes" rows="4" maxlength="400" placeholder="المقاسات التقريبية، التوزيع المفضل، أو نوع الخامة"></textarea></label>
+          <label>المقاسات وملاحظات المشروع <small>(اختياري)</small><textarea name="notes" rows="4" maxlength="400" placeholder="مثال: جداران متجاوران، وفرن مدمج، وأحتاج مساحة أكبر للتحضير."></textarea></label>
           <div class="selection" id="selection" hidden><span id="selected-design"></span><button type="button" id="clear-design">إزالة التصميم</button></div>
           <div class="selection" id="finish-selection" hidden><span id="selected-finish"></span><button type="button" id="clear-finish">إزالة اختيار الخامات</button></div>
           <div class="form-end"><button class="button button-dark" type="submit" disabled>مراجعة الطلب <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></button></div>
         </form>
         <aside class="quote-aside">
-          <h2>وش يساعدنا في تحديد السعر؟</h2>
+          <h2>معلومات تساعد في تقدير السعر</h2>
           <ul>
-            <li>مقاسات المطبخ التقريبية ومكان الأجهزة.</li>
-            <li>أي تصميم أعجبك في <a href="designs.html">صفحة التصاميم</a>.</li>
-            <li id="quote-method">بعد المراجعة تقدر تنسخ الطلب أو تحمّله.</li>
+            <li>عرض الجدران التقريبي وأماكن الأجهزة الحالية.</li>
+            <li>يمكنك إرفاق ما يعجبك من <a href="designs.html">معرض التصاميم</a>.</li>
+            <li id="quote-method">يمكنك نسخ الطلب أو تنزيله بعد مراجعته.</li>
           </ul>
           <a id="store-whatsapp" class="line-link" target="_blank" rel="noopener noreferrer" hidden>واتساب فيوتشر كيت <svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></a>
           <a id="store-map" class="line-link" target="_blank" rel="noopener noreferrer" hidden>موقع المعرض <svg class="icon" aria-hidden="true"><use href="#diagonal"/></svg></a>
@@ -89,12 +89,12 @@
       <div class="wrap faq-grid section">
         <h2>الأسئلة الشائعة</h2>
         <div class="faq-list">
-          <details><summary>كيف تحددون سعر المطبخ؟ <svg class="icon" aria-hidden="true"><use href="#plus"/></svg></summary><p>يعتمد السعر على المقاسات وعدد الخزائن ونوع الأبواب والسطح. تدخل سلال السحب وفواصل الأدراج في الحساب إذا طلبتها.</p></details>
-          <details><summary>أقدر أطلب عرض سعر من دون مقاسات؟ <svg class="icon" aria-hidden="true"><use href="#plus"/></svg></summary><p>نعم. اذكر الحي وصِف لنا المطبخ. نأخذ المقاسات النهائية في الموقع قبل التصنيع.</p></details>
-          <details><summary>متى أعرف مدة التنفيذ؟ <svg class="icon" aria-hidden="true"><use href="#plus"/></svg></summary><p>نحدّد المدة بعد الاتفاق على التصميم والخامات والتأكد من جاهزية المكان للتركيب.</p></details>
-          <details><summary>متى أختار الفرن والثلاجة؟ <svg class="icon" aria-hidden="true"><use href="#plus"/></svg></summary><p>قبل اعتماد توزيع الخزائن، خصوصًا إذا كانت الأجهزة مدمجة. نحتاج مقاس كل جهاز والمساحة اللازمة لتهويته وموقع توصيلاته.</p></details>
-          <details><summary>أقدر أغيّر الأبواب وأبقي الخزائن؟ <svg class="icon" aria-hidden="true"><use href="#plus"/></svg></summary><p>ممكن إذا كانت الخزائن سليمة ومستوية. نفحص الأبعاد والمفصلات ونحدّد القطع اللي تحتاج إلى تغيير.</p></details>
-          <details><summary>كيف أختار مقاس الجزيرة؟ <svg class="icon" aria-hidden="true"><use href="#plus"/></svg></summary><p>حدّد أولًا إن كنت تحتاج الجزيرة للتحضير أو الجلوس. بعدها نحسب عرض الممر والمساحة اللازمة لفتح الأدراج والأجهزة.</p></details>
+          <details><summary>كيف تحددون سعر المطبخ؟ <svg class="icon" aria-hidden="true"><use href="#plus"/></svg></summary><p>يدخل في حساب السعر مقاس المطبخ وعدد الخزائن ونوع الواجهات والسطح، إلى جانب أي تجهيزات تختارها مثل سلال السحب وفواصل الأدراج.</p></details>
+          <details><summary>هل أستطيع طلب عرض سعر قبل القياس؟ <svg class="icon" aria-hidden="true"><use href="#plus"/></svg></summary><p>نعم. اذكر الحي وصِف لنا ما تحتاج إليه. نأخذ مقاسات التصنيع في الموقع.</p></details>
+          <details><summary>متى أعرف مدة التنفيذ؟ <svg class="icon" aria-hidden="true"><use href="#plus"/></svg></summary><p>يتضح موعد التنفيذ بعد اعتماد التصميم والخامات ومعرفة متى يصبح الموقع جاهزًا للتركيب.</p></details>
+          <details><summary>متى أختار الفرن والثلاجة؟ <svg class="icon" aria-hidden="true"><use href="#plus"/></svg></summary><p>اختر الأجهزة قبل اعتماد مخطط الخزائن، خصوصًا الأجهزة المدمجة. نحتاج إلى أبعاد التركيب ومواقع التوصيلات ومتطلبات التهوية لكل جهاز.</p></details>
+          <details><summary>هل يمكن تغيير الأبواب والإبقاء على الخزائن؟ <svg class="icon" aria-hidden="true"><use href="#plus"/></svg></summary><p>يمكن تغيير الأبواب إذا كانت الخزائن بحالة تسمح باستخدامها. نراجع استواءها ومقاسات الفتحات والمفصلات أولًا.</p></details>
+          <details><summary>كيف أختار مقاس الجزيرة؟ <svg class="icon" aria-hidden="true"><use href="#plus"/></svg></summary><p>حدّد ما ستستخدم الجزيرة من أجله. يختلف المقاس عند إضافة مقاعد أو حوض، ويجب أن يبقى حولها ممر يكفي للحركة وفتح الأدراج.</p></details>
         </div>
       </div>
     </section>
@@ -135,7 +135,7 @@
     <div class="dialog-copy">
       <button type="button" class="close" data-close aria-label="إغلاق"><svg class="icon"><use href="#x"/></svg></button>
       <h2 id="privacy-title">خصوصية الطلب</h2>
-      <p>يحفظ المتصفح تصاميم المقارنة على جهازك. وتبقى بيانات الطلب في المتصفح أثناء التجهيز. تقدر تنسخ الطلب أو تنزّله. عند فتح واتساب، تظهر فيه تفاصيل الطلب لترسلها بنفسك.</p>
+      <p>يحفظ المتصفح التصاميم التي تختارها للمقارنة. تُستخدم بيانات النموذج لتجهيز الطلب، ويمكنك نسخه أو تنزيله. إذا ظهر خيار واتساب، يمكنك فتح مسودة الرسالة ومراجعتها قبل الإرسال.</p>
     </div>
   </dialog>
 </body>
